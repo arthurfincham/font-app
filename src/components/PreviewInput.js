@@ -1,18 +1,11 @@
 export default function PreviewInput({ updatePreviewText }) {
   return (
-    <tr className="w-1/2 ">
-      <td></td>
-      <td className="w-10/12 text-2xl">
-        {
-          <input
-            type="text"
-            name="previewText"
-            className="h-12 p-2 text-2xl w-full"
-            placeholder="Preview text..."
-            onChange={(e) => updatePreviewText(e)}
-          />
-        }
-      </td>
-    </tr>
+    <input
+      type="text"
+      name="previewText"
+      className="h-12 border-4 border-black rounded-lg focus:outline-none text-lg p-2  w-1/2"
+      placeholder="Preview text..."
+      onChange={(e) => updatePreviewText(e)}
+    />
   );
 }

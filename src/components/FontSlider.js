@@ -26,7 +26,7 @@ export default function FontSlider({ setFontSize }) {
     },
   ];
   return (
-    <Box sx={{ height: 250 }}>
+    <Box sx={{ height: 250, marginTop: 1, marginBottom: 1 }}>
       <Slider
         sx={{
           '& input[type="range"]': {
