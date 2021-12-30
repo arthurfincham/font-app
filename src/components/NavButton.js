@@ -13,7 +13,7 @@ export default function NavButton({ children, name }) {
   return (
     <div className="relative">
       <animated.button
-        className="p-2 w-24 flex items-center justify-center font-bold rounded-lg border-4  themeToggleButton"
+        className={`p-2  w-24 flex items-center justify-center font-bold rounded-lg border-4  themeToggleButton`}
         onClick={() => setToggle(!isToggled)}
       >
         <p>{name}</p>

@@ -8,6 +8,8 @@ import { GlobalStyles } from './global';
 function App() {
   const [theme, setTheme] = useState('Light');
 
+  const [fontSize, setFontSize] = useState(1.5);
+
   const themePicker = (theme) => {
     if (theme === 'Light') {
       return lightTheme;
@@ -22,12 +24,12 @@ function App() {
 
   return (
     <>
-      <Navbar setTheme={setTheme} />
+      <Navbar setTheme={setTheme} setFontSize={setFontSize} />
       <main>
         <ThemeProvider theme={themePicker(theme)}>
           <div className="flex flex-col justify-center items-center py-16">
             <GlobalStyles />
-            <PreviewTable />
+            <PreviewTable fontSize={fontSize} />
           </div>
         </ThemeProvider>
       </main>

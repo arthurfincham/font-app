@@ -1,0 +1,30 @@
+.MuiSlider-rail,
+.MuiSlider-track {
+  color: white;
+  padding: 3px;
+  opacity: 1 !important;
+}
+
+/* .Mui-focusVisible .MuiSlider-thumbColorPrimary; */
+.MuiSlider-mark {
+  display: none;
+}
+
+.MuiSlider-thumb {
+  color: white;
+  border: 3px solid black;
+  box-shadow: none;
+}
+
+.MuiSlider-thumb:hover,
+.MuiSlider-thumb:active,
+.MuiSlider-thumb:focus,
+.Mui-active,
+.Mui-focusVisible {
+  shadow: none;
+  box-shadow: none !important;
+}
+
+.MuiSlider-markLabel {
+  font-weight: bold !important;
+}

@@ -1,4 +1,4 @@
-export default function ContentToggle({ name, bgColor, fontColor, setTheme }) {
+export default function ContentToggle({ name, bgColor, fontColor, stateToggle }) {
   const styling = {
     backgroundColor: bgColor,
     color: fontColor,
@@ -6,7 +6,7 @@ export default function ContentToggle({ name, bgColor, fontColor, setTheme }) {
   };
 
   return (
-    <button style={styling} className="p-2 rounded-lg  border-4 w-full font-bold shadow-" onClick={() => setTheme(name)}>
+    <button style={styling} className="p-2 rounded-lg  border-4 w-full font-bold shadow-" onClick={() => stateToggle(name)}>
       {name}
     </button>
   );
