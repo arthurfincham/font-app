@@ -2,7 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import './FontSlider.css';
-export default function FontSlider({ setFontSize }) {
+export default function FontSlider({ setFontSize, fontSize }) {
   const marks = [
     {
       value: 0.5,
@@ -36,7 +36,7 @@ export default function FontSlider({ setFontSize }) {
         orientation="vertical"
         onChange={(e) => setFontSize(e.target.value)}
         aria-label="Custom marks"
-        defaultValue={1.5}
+        defaultValue={fontSize}
         valueLabelDisplay="off"
         step={0.5}
         marks={marks}

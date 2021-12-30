@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
   
 
-  main, input, #themeToggleButton {
+  main,  #themeToggleButton {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
   }
