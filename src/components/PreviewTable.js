@@ -2,9 +2,10 @@ import { useState } from 'react';
 import PreviewRow from './PreviewRow';
 import PreviewInput from './PreviewInput';
 
-export default function PreviewTable({ fontSize, previewText }) {
+export default function PreviewTable({ fontSize, previewText, fontWeight }) {
   const styling = {
     fontSize: `${fontSize}em`,
+    fontWeight: fontWeight,
   };
 
   return (

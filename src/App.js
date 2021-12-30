@@ -11,6 +11,8 @@ function App() {
 
   const [fontSize, setFontSize] = useState(1.5);
 
+  const [fontWeight, setFontWeight] = useState('400');
+
   const updatePreviewText = (e) => {
     setPreviewText(e.target.value);
   };
@@ -29,12 +31,12 @@ function App() {
 
   return (
     <>
-      <Navbar setTheme={setTheme} setFontSize={setFontSize} updatePreviewText={updatePreviewText} />
+      <Navbar setTheme={setTheme} setFontSize={setFontSize} updatePreviewText={updatePreviewText} setFontWeight={setFontWeight} />
       <main>
         <ThemeProvider theme={themePicker(theme)}>
           <div className="flex flex-col justify-center items-center py-16">
             <GlobalStyles />
-            <PreviewTable fontSize={fontSize} previewText={previewText} />
+            <PreviewTable fontSize={fontSize} previewText={previewText} fontWeight={fontWeight} />
           </div>
         </ThemeProvider>
       </main>
