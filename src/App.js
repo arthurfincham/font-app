@@ -7,8 +7,13 @@ import { GlobalStyles } from './global';
 
 function App() {
   const [theme, setTheme] = useState('Light');
+  const [previewText, setPreviewText] = useState(['']);
 
   const [fontSize, setFontSize] = useState(1.5);
+
+  const updatePreviewText = (e) => {
+    setPreviewText(e.target.value);
+  };
 
   const themePicker = (theme) => {
     if (theme === 'Light') {
@@ -24,12 +29,12 @@ function App() {
 
   return (
     <>
-      <Navbar setTheme={setTheme} setFontSize={setFontSize} />
+      <Navbar setTheme={setTheme} setFontSize={setFontSize} updatePreviewText={updatePreviewText} />
       <main>
         <ThemeProvider theme={themePicker(theme)}>
           <div className="flex flex-col justify-center items-center py-16">
             <GlobalStyles />
-            <PreviewTable fontSize={fontSize} />
+            <PreviewTable fontSize={fontSize} previewText={previewText} />
           </div>
         </ThemeProvider>
       </main>

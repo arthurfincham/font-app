@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 
-export default function NavButton({ children, name }) {
+export default function NavButton({ children, name, id }) {
   const [isToggled, setToggle] = useState(false);
 
   const menuAppear = useSpring({
@@ -13,14 +13,13 @@ export default function NavButton({ children, name }) {
   return (
     <div className="relative">
       <animated.button
-        className={`p-2  w-24 flex items-center justify-center font-bold rounded-lg border-4  themeToggleButton`}
+        className={`p-2  w-24 flex items-center border-black justify-center bg-white font-bold rounded-lg border-4  `}
         onClick={() => setToggle(!isToggled)}
+        id={id}
       >
         <p>{name}</p>
       </animated.button>
-      <animated.div onClick={() => setToggle(!isToggled)} style={menuAppear}>
-        {isToggled ? children : null}
-      </animated.div>
+      <animated.div style={menuAppear}>{isToggled ? children : null}</animated.div>
     </div>
   );
 }

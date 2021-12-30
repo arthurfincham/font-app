@@ -2,14 +2,19 @@ import NavButton from './NavButton';
 import NavButtonContent from './NavButtonContent';
 import ContentToggle from './ContentToggle';
 import FontSlider from './FontSlider';
-export default function Navbar({ setTheme, setFontSize }) {
+import PreviewInput from './PreviewInput';
+export default function Navbar({ setTheme, setFontSize, updatePreviewText }) {
   return (
     <nav class="bg-yellow-300 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
       <div class="container flex flex-wrap justify-between items-center mx-auto">
-        <h1 className="text-black font-bold">The Only Fonts You Need</h1>
-        <div className="flex space-x-12">
-          <FontSlider setFontSize={setFontSize} />
-          <NavButton name="Themes">
+        <PreviewInput updatePreviewText={updatePreviewText} />
+        <div className="flex space-x-8">
+          <NavButton name="Font Size">
+            <NavButtonContent>
+              <FontSlider setFontSize={setFontSize} />
+            </NavButtonContent>
+          </NavButton>
+          <NavButton name="Themes" id="themeToggleButton">
             <NavButtonContent>
               <ContentToggle name="Dark" bgColor="#222223" fontColor="white" stateToggle={setTheme} />
               <ContentToggle name="Light" bgColor="white" fontColor="black" stateToggle={setTheme} />

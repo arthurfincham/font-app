@@ -26,8 +26,14 @@ export default function FontSlider({ setFontSize }) {
     },
   ];
   return (
-    <Box sx={{ width: 200 }}>
+    <Box sx={{ height: 250 }}>
       <Slider
+        sx={{
+          '& input[type="range"]': {
+            WebkitAppearance: 'slider-vertical',
+          },
+        }}
+        orientation="vertical"
         onChange={(e) => setFontSize(e.target.value)}
         aria-label="Custom marks"
         defaultValue={1.5}
