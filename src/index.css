@@ -16,3 +16,7 @@ tr {
   border-collapse: collapse;
   border: 1px solid gray;
 }
+
+main {
+  min-height: 80vh;
+}

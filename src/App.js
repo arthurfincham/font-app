@@ -1,26 +1,37 @@
 import { useState } from 'react';
-import PreviewRow from './components/PreviewRow';
-import PreviewInput from './components/PreviewInput';
+import PreviewTable from './components/PreviewTable';
+import Navbar from './components/Navbar';
+import { ThemeProvider } from 'styled-components';
+import { lightTheme, darkTheme, yellowTheme } from './themes';
+import { GlobalStyles } from './global';
 
 function App() {
-  const [previewText, setPreviewText] = useState(['']);
+  const [theme, setTheme] = useState('Light');
 
-  const updatePreviewText = (e) => {
-    setPreviewText(e.target.value);
+  const themePicker = (theme) => {
+    if (theme === 'Light') {
+      return lightTheme;
+    }
+    if (theme === 'Dark') {
+      return darkTheme;
+    }
+    if (theme === 'Yellow') {
+      return yellowTheme;
+    }
   };
 
   return (
-    <div className="App flex flex-col justify-center items-center w-full h-full">
-      <h1>The Only Fonts You Need</h1>
-      <table className="h-full w-11/12">
-        <PreviewInput updatePreviewText={updatePreviewText} />
-        <PreviewRow font={'Bodoni Moda'} fontName={'Bodoni'} previewText={previewText} />
-        <PreviewRow font={'EB Garamond'} fontName={'Garamond'} previewText={previewText} />
-        <PreviewRow font={'Old Standard TT'} fontName={'Old Standard'} previewText={previewText} />
-        <PreviewRow font={'Jost'} fontName={'Jost'} previewText={previewText} />
-        <PreviewRow font={'Inter'} fontName={'Inter'} previewText={previewText} />
-      </table>
-    </div>
+    <>
+      <Navbar setTheme={setTheme} />
+      <main>
+        <ThemeProvider theme={themePicker(theme)}>
+          <div className="flex flex-col justify-center items-center py-16">
+            <GlobalStyles />
+            <PreviewTable />
+          </div>
+        </ThemeProvider>
+      </main>
+    </>
   );
 }
 
