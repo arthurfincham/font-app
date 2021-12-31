@@ -8,13 +8,13 @@ import { GlobalStyles } from './global';
 function App() {
   const [siteTheme, setSiteTheme] = useState('Light');
 
-  const [previewText, setPreviewText] = useState(['']);
+  const [previewText, setPreviewText] = useState([null]);
 
   const previewInput = useRef(null);
 
   const [fontSize, setFontSize] = useState('1.5');
 
-  const [fontWeight, setFontWeight] = useState('400');
+  const [fontWeight, setFontWeight] = useState('600');
 
   const updatePreviewText = (e) => {
     setPreviewText(e.target.value);
@@ -33,6 +33,7 @@ function App() {
   };
 
   useEffect(() => {
+    console.log(previewText.length);
     previewInput.current.dispatchEvent(
       new Event('change', {
         detail: {

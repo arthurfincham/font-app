@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import FontWeightToggle from './FontWeightToggle';
 import ThemeToggle from './ThemeToggle';
 import FontSizeToggle from './FontSizeToggle';
-import Divider from '@mui/material/Divider';
 
 export default function Navbar({
   setSiteTheme,

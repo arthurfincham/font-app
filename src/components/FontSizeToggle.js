@@ -1,7 +1,7 @@
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { styled } from '@mui/system';
-import Tooltip from '@mui/material/Tooltip';
+
 import AbcIcon from '@mui/icons-material/Abc';
 
 export default function FontSizeToggle({ fontSize, setFontSize }) {
@@ -19,18 +19,16 @@ export default function FontSizeToggle({ fontSize, setFontSize }) {
     setFontSize(newAlignment);
   };
   return (
-    <Tooltip title="Font Size" disableFocusListener disableTouchListener enterHoverDelay={2000}>
-      <StyledToggleButtonGroup size="small" value={fontSize} exclusive onChange={handleSize} aria-label="text alignment">
-        <ToggleButton value="1" aria-label="left aligned">
-          <StyledIcon size="1.5em" />
-        </ToggleButton>
-        <ToggleButton value="1.5" aria-label="left aligned">
-          <StyledIcon size="2.5em" />
-        </ToggleButton>
-        <ToggleButton value="2" aria-label="left aligned">
-          <StyledIcon size="3.5em" />
-        </ToggleButton>
-      </StyledToggleButtonGroup>
-    </Tooltip>
+    <StyledToggleButtonGroup size="small" value={fontSize} exclusive onChange={handleSize} aria-label="text alignment">
+      <ToggleButton value="1" aria-label="left aligned">
+        <StyledIcon size="1.5em" />
+      </ToggleButton>
+      <ToggleButton value="1.5" aria-label="left aligned">
+        <StyledIcon size="2.5em" />
+      </ToggleButton>
+      <ToggleButton value="2" aria-label="left aligned">
+        <StyledIcon size="3.5em" />
+      </ToggleButton>
+    </StyledToggleButtonGroup>
   );
 }

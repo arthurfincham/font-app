@@ -5,7 +5,6 @@ export default function PreviewInput({ updatePreviewText, previewInput, previewT
   return (
     <FormControl sx={{ width: '50ch', display: 'flex', justifyContent: 'center' }}>
       <OutlinedInput
-        autoFocus={true}
         value={previewText}
         ref={previewInput}
         placeholder="Please enter text"

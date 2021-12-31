@@ -22,3 +22,19 @@ body {
 .MuiToggleButtonGroup-root {
   margin-inline: 5px;
 }
+.fontRowInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+
+  width: max-content;
+  color: rgb(177, 177, 177);
+  font-size: 1em;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.fontRowInfo > * {
+  margin: 0;
+}
