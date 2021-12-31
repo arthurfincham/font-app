@@ -3,12 +3,17 @@ import NavButtonContent from './NavButtonContent';
 import ContentToggle from './ContentToggle';
 import FontSlider from './FontSlider';
 import PreviewInput from './PreviewInput';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+
 export default function Navbar({ setTheme, setFontSize, updatePreviewText, setFontWeight, fontSize }) {
   return (
-    <nav className="bg-yellow-300 px-2 sm:px-4 py-2.5 rounded ">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <PreviewInput updatePreviewText={updatePreviewText} />
-        <div className="flex space-x-2 md:space-x-8">
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <PreviewInput updatePreviewText={updatePreviewText} />
+
           <NavButton name="Size">
             <NavButtonContent>
               <FontSlider setFontSize={setFontSize} fontSize={fontSize} />
@@ -28,8 +33,8 @@ export default function Navbar({ setTheme, setFontSize, updatePreviewText, setFo
               <ContentToggle name="Yellow" bgColor="#FEF3C7" fontColor="#372FA3" stateToggle={setTheme} />
             </NavButtonContent>
           </NavButton>
-        </div>
-      </div>
-    </nav>
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }

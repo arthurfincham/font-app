@@ -1,11 +1,18 @@
+import TableCell from '@mui/material/TableCell';
+import TableRow from '@mui/material/TableRow';
+
 export default function PreviewRow({ font, fontName, previewText }) {
   const styling = {
     fontFamily: font,
   };
   return (
-    <tr style={styling}>
-      <td className="p-2 text-center fontName">{fontName}</td>
-      <td className="p-2   h-24 w-10/12">{previewText}</td>
-    </tr>
+    <TableRow>
+      <TableCell style={styling} align="center">
+        {fontName}
+      </TableCell>
+      <TableCell sx={{ width: '85%' }} style={styling}>
+        {previewText}
+      </TableCell>
+    </TableRow>
   );
 }
