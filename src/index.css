@@ -1,4 +1,8 @@
 html,
+main,
+.App,
+.MuiTableContainer-root,
+.MuiTable-root,
 #root {
   height: 100%;
 }

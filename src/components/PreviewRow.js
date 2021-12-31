@@ -6,6 +6,7 @@ export default function PreviewRow({ font, fontName, previewText, fontWeight, fo
     fontFamily: font,
     fontSize: `${fontSize}em`,
     fontWeight: fontWeight,
+    whiteSpace: 'nowrap',
   };
   return (
     <TableRow>

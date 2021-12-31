@@ -60,7 +60,7 @@ function App() {
       <main>
         <ThemeProvider theme={themePicker(siteTheme)}>
           <GlobalStyles />
-          <PreviewTable fontSize={fontSize} previewText={previewText} fontWeight={fontWeight} />
+          <PreviewTable fontSize={fontSize} previewText={previewText} fontWeight={fontWeight} sx={{ height: '100%' }} />
         </ThemeProvider>
       </main>
     </>
