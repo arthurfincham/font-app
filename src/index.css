@@ -11,3 +11,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.MuiToggleButton-root {
+  height: 50px;
+  width: 50px;
+}
+.MuiToggleButtonGroup-root {
+  margin-inline: 5px;
+}

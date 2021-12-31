@@ -12,7 +12,7 @@ function App() {
 
   const previewInput = useRef(null);
 
-  const [fontSize, setFontSize] = useState(1.5);
+  const [fontSize, setFontSize] = useState('1.5');
 
   const [fontWeight, setFontWeight] = useState('400');
 
@@ -48,6 +48,7 @@ function App() {
     <>
       <Navbar
         setSiteTheme={setSiteTheme}
+        siteTheme={siteTheme}
         setFontSize={setFontSize}
         updatePreviewText={updatePreviewText}
         setFontWeight={setFontWeight}
