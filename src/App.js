@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import PreviewTable from './components/PreviewTable';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from 'styled-components';
@@ -7,7 +7,10 @@ import { GlobalStyles } from './global';
 
 function App() {
   const [theme, setTheme] = useState('Light');
+
   const [previewText, setPreviewText] = useState(['']);
+
+  const previewInput = useRef(null);
 
   const [fontSize, setFontSize] = useState(1.5);
 
@@ -29,9 +32,29 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    previewInput.current.dispatchEvent(
+      new Event('change', {
+        detail: {
+          newValue: previewText,
+        },
+        bubbles: true,
+        cancelable: true,
+      })
+    );
+  }, [previewText]);
+
   return (
     <>
-      <Navbar setTheme={setTheme} setFontSize={setFontSize} updatePreviewText={updatePreviewText} setFontWeight={setFontWeight} fontSize={fontSize} />
+      <Navbar
+        setTheme={setTheme}
+        setFontSize={setFontSize}
+        updatePreviewText={updatePreviewText}
+        setFontWeight={setFontWeight}
+        fontSize={fontSize}
+        previewInput={previewInput}
+        previewText={previewText}
+      />
       <main>
         <ThemeProvider theme={themePicker(theme)}>
           <GlobalStyles />

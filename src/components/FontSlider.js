@@ -27,19 +27,17 @@ export default function FontSlider({ setFontSize, fontSize }) {
     },
   ];
   return (
-    <MenuItem>
-      <Box sx={{ width: 250, marginTop: 1, marginBottom: 1 }}>
-        <Slider
-          onChange={(e) => setFontSize(e.target.value)}
-          aria-label="Custom marks"
-          defaultValue={fontSize}
-          valueLabelDisplay="off"
-          step={0.5}
-          marks={marks}
-          max={2.5}
-          min={0.5}
-        />
-      </Box>
-    </MenuItem>
+    <Box sx={{ width: 250, marginTop: 1, marginBottom: 1 }}>
+      <Slider
+        onChange={(e) => setFontSize(e.target.value)}
+        aria-label="Custom marks"
+        defaultValue={fontSize}
+        valueLabelDisplay="off"
+        step={0.5}
+        marks={marks}
+        max={2.5}
+        min={0.5}
+      />
+    </Box>
   );
 }
