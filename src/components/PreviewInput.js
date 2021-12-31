@@ -10,10 +10,10 @@ export default function PreviewInput({ updatePreviewText, previewInput, previewT
 
     const helperText = useMemo(() => {
       if (focused) {
-        return 'This field is being focused';
+        return 'Feel free to change the styles';
       }
 
-      return 'Helper text';
+      return 'Preview Text';
     }, [focused]);
 
     return <FormHelperText>{helperText}</FormHelperText>;

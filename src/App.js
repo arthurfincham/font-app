@@ -6,7 +6,7 @@ import { lightTheme, darkTheme, yellowTheme } from './themes';
 import { GlobalStyles } from './global';
 
 function App() {
-  const [theme, setTheme] = useState('Light');
+  const [siteTheme, setSiteTheme] = useState('Light');
 
   const [previewText, setPreviewText] = useState(['']);
 
@@ -47,16 +47,17 @@ function App() {
   return (
     <>
       <Navbar
-        setTheme={setTheme}
+        setSiteTheme={setSiteTheme}
         setFontSize={setFontSize}
         updatePreviewText={updatePreviewText}
         setFontWeight={setFontWeight}
+        fontWeight={fontWeight}
         fontSize={fontSize}
         previewInput={previewInput}
         previewText={previewText}
       />
       <main>
-        <ThemeProvider theme={themePicker(theme)}>
+        <ThemeProvider theme={themePicker(siteTheme)}>
           <GlobalStyles />
           <PreviewTable fontSize={fontSize} previewText={previewText} fontWeight={fontWeight} />
         </ThemeProvider>
