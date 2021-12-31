@@ -32,12 +32,10 @@ function App() {
   return (
     <>
       <Navbar setTheme={setTheme} setFontSize={setFontSize} updatePreviewText={updatePreviewText} setFontWeight={setFontWeight} fontSize={fontSize} />
-      <main className="h-full">
+      <main>
         <ThemeProvider theme={themePicker(theme)}>
-          <div className="flex flex-col justify-center items-center py-2 h-full">
-            <GlobalStyles />
-            <PreviewTable fontSize={fontSize} previewText={previewText} fontWeight={fontWeight} />
-          </div>
+          <GlobalStyles />
+          <PreviewTable fontSize={fontSize} previewText={previewText} fontWeight={fontWeight} />
         </ThemeProvider>
       </main>
     </>

@@ -1,38 +1,33 @@
-import NavButton from './NavButton';
-import NavButtonContent from './NavButtonContent';
-import ContentToggle from './ContentToggle';
 import FontSlider from './FontSlider';
 import PreviewInput from './PreviewInput';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
 
 export default function Navbar({ setTheme, setFontSize, updatePreviewText, setFontWeight, fontSize }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static" sx={{ backgroundColor: '#D4D1FE' }}>
+        <Toolbar sx={{ padding: '5vh' }}>
           <PreviewInput updatePreviewText={updatePreviewText} />
-
-          <NavButton name="Size">
-            <NavButtonContent>
-              <FontSlider setFontSize={setFontSize} fontSize={fontSize} />
-            </NavButtonContent>
-          </NavButton>
-          <NavButton name="Weight">
-            <NavButtonContent>
-              <ContentToggle name="400" bgColor="white" fontColor="black" stateToggle={setFontWeight} />
-              <ContentToggle name="600" bgColor="white" fontColor="black" stateToggle={setFontWeight} />
-              <ContentToggle name="800" bgColor="white" fontColor="black" stateToggle={setFontWeight} />
-            </NavButtonContent>
-          </NavButton>
-          <NavButton name="Themes" id="themeToggleButton">
-            <NavButtonContent>
-              <ContentToggle name="Dark" bgColor="#222223" fontColor="white" stateToggle={setTheme} />
-              <ContentToggle name="Light" bgColor="white" fontColor="black" stateToggle={setTheme} />
-              <ContentToggle name="Yellow" bgColor="#FEF3C7" fontColor="#372FA3" stateToggle={setTheme} />
-            </NavButtonContent>
-          </NavButton>
+          <FontSlider setFontSize={setFontSize} fontSize={fontSize} />
+          <MenuItem>
+            <ButtonGroup orientation="vertical" aria-label="vertical contained button group" variant="outlined">
+              <Button onClick={() => setFontWeight('400')}>400</Button>
+              <Button onClick={() => setFontWeight('600')}>600</Button>
+              <Button onClick={() => setFontWeight('800')}>800</Button>
+            </ButtonGroup>
+          </MenuItem>
+          <MenuItem>
+            <ButtonGroup orientation="vertical" aria-label="vertical contained button group" variant="outlined">
+              <Button onClick={() => setTheme('Dark')}>Dark</Button>
+              <Button onClick={() => setTheme('Light')}>Light</Button>
+              <Button onClick={() => setTheme('Yellow')}>Yellow</Button>
+            </ButtonGroup>
+          </MenuItem>
         </Toolbar>
       </AppBar>
     </Box>

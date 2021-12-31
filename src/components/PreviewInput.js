@@ -3,6 +3,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 import Box from '@mui/material/Box';
 import FormHelperText from '@mui/material/FormHelperText';
 import { useMemo } from 'react';
+import MenuItem from '@mui/material/MenuItem';
 
 export default function PreviewInput({ updatePreviewText }) {
   function MyFormHelperText() {
@@ -20,11 +21,13 @@ export default function PreviewInput({ updatePreviewText }) {
   }
 
   return (
-    <Box component="form" noValidate autoComplete="off">
-      <FormControl sx={{ width: '25ch' }}>
-        <OutlinedInput placeholder="Please enter text" onChange={(e) => updatePreviewText(e)} />
-        <MyFormHelperText />
-      </FormControl>
-    </Box>
+    <MenuItem>
+      <Box component="form" noValidate autoComplete="off">
+        <FormControl sx={{ width: '25ch' }}>
+          <OutlinedInput placeholder="Please enter text" onChange={(e) => updatePreviewText(e)} />
+          <MyFormHelperText />
+        </FormControl>
+      </Box>
+    </MenuItem>
   );
 }
