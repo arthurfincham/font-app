@@ -17,7 +17,7 @@ export default function Navbar({ setTheme, setFontSize, updatePreviewText, setFo
           <MenuItem>
             <ButtonGroup orientation="vertical" aria-label="vertical contained button group" variant="outlined">
               <Button onClick={() => setFontWeight('400')}>400</Button>
-              <Button onClick={() => setFontWeight('600')}>600</Button>
+              <Button onClick={() => setFontWeight(600)}>600</Button>
               <Button onClick={() => setFontWeight('800')}>800</Button>
             </ButtonGroup>
           </MenuItem>
