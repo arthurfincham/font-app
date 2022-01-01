@@ -25,7 +25,7 @@ body {
 .fontRowInfo {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
 
   width: max-content;
   color: rgb(177, 177, 177);
@@ -37,4 +37,17 @@ body {
 
 .fontRowInfo > * {
   margin: 0;
+}
+
+.codeBlock {
+  display: inline-block;
+  font-family: Menlo, Monaco, Consolas;
+  line-height: 1.4em;
+  font-size: 0.8em;
+  cursor: pointer;
+  color: rgb(65, 65, 65);
+  width: 50%;
+  padding: 0.5em 0em 0.5em 0.5em;
+  background-color: rgb(243, 243, 243);
+  text-align: left;
 }

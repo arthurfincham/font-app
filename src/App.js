@@ -16,6 +16,8 @@ function App() {
 
   const [fontWeight, setFontWeight] = useState('600');
 
+  const [codeDisplay, setCodeDisplay] = useState(false);
+
   const updatePreviewText = (e) => {
     setPreviewText(e.target.value);
   };
@@ -57,11 +59,13 @@ function App() {
         fontSize={fontSize}
         previewInput={previewInput}
         previewText={previewText}
+        codeDisplay={codeDisplay}
+        setCodeDisplay={setCodeDisplay}
       />
       <main>
         <ThemeProvider theme={themePicker(siteTheme)}>
           <GlobalStyles />
-          <PreviewTable fontSize={fontSize} previewText={previewText} fontWeight={fontWeight} sx={{ height: '100%' }} />
+          <PreviewTable fontSize={fontSize} codeDisplay={codeDisplay} previewText={previewText} fontWeight={fontWeight} sx={{ height: '100%' }} />
         </ThemeProvider>
       </main>
     </>

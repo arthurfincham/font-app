@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import FontWeightToggle from './FontWeightToggle';
 import ThemeToggle from './ThemeToggle';
 import FontSizeToggle from './FontSizeToggle';
+import CodeToggle from './CodeToggle';
 
 export default function Navbar({
   setSiteTheme,
@@ -15,6 +16,8 @@ export default function Navbar({
   setFontWeight,
   fontWeight,
   fontSize,
+  codeDisplay,
+  setCodeDisplay,
 }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -31,6 +34,7 @@ export default function Navbar({
         <PreviewInput updatePreviewText={updatePreviewText} previewInput={previewInput} previewText={previewText} />
         <FontSizeToggle fontSize={fontSize} setFontSize={setFontSize} />
         <FontWeightToggle fontWeight={fontWeight} setFontWeight={setFontWeight} />
+        <CodeToggle codeDisplay={codeDisplay} setCodeDisplay={setCodeDisplay} />
         <ThemeToggle siteTheme={siteTheme} setSiteTheme={setSiteTheme} />
       </Paper>
     </Box>
