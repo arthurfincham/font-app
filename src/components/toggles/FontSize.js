@@ -4,7 +4,7 @@ import { styled } from '@mui/system';
 
 import AbcIcon from '@mui/icons-material/Abc';
 
-export default function FontSizeToggle({ fontSize, setFontSize }) {
+export default function FontSize({ fontSize, setFontSize }) {
   const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     '& .MuiToggleButtonGroup-grouped': {
       margin: '5px 0px ',

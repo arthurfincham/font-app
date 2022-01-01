@@ -3,7 +3,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { styled } from '@mui/system';
 import { Typography } from '@mui/material';
 
-export default function FontWeightToggle({ fontWeight, setFontWeight }) {
+export default function FontWeight({ fontWeight, setFontWeight }) {
   const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     '& .MuiToggleButtonGroup-grouped': {
       margin: '5px 0px ',

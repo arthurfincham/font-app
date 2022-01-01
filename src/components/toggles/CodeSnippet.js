@@ -4,7 +4,7 @@ import { styled } from '@mui/system';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 import CodeIcon from '@mui/icons-material/Code';
 
-export default function CodeToggle({ codeDisplay, setCodeDisplay }) {
+export default function CodeSnippet({ codeDisplay, setCodeDisplay }) {
   const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     '& .MuiToggleButtonGroup-grouped': {
       margin: '5px 0px ',
