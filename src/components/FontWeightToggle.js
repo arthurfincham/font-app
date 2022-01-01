@@ -19,14 +19,19 @@ export default function FontWeightToggle({ fontWeight, setFontWeight }) {
           400
         </Typography>
       </ToggleButton>
+      <ToggleButton value="500" aria-label="left aligned">
+        <Typography variant="button" sx={{ fontWeight: 'bold' }}>
+          500
+        </Typography>
+      </ToggleButton>
       <ToggleButton value="600" aria-label="left aligned">
         <Typography variant="button" sx={{ fontWeight: 'bold' }}>
           600
         </Typography>
       </ToggleButton>
-      <ToggleButton value="800" aria-label="left aligned">
+      <ToggleButton value="700" aria-label="left aligned">
         <Typography variant="button" sx={{ fontWeight: 'bold' }}>
-          800
+          700
         </Typography>
       </ToggleButton>
     </StyledToggleButtonGroup>

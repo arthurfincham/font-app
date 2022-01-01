@@ -5,7 +5,7 @@ import { render } from '@testing-library/react';
 
 export default function PreviewTable({ fontSize, previewText, fontWeight, codeDisplay }) {
   const htmlBodoni = (font) => {
-    return `<link href='https://fonts.googleapis.com/css2?family=${font}:wght@400;600;800&display=swap' rel='stylesheet' />`;
+    return `<link href='https://fonts.googleapis.com/css2?family=${font}:wght@400;500;600;700&display=swap' rel='stylesheet' />`;
   };
 
   return (
@@ -41,16 +41,7 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           previewText={previewText}
           transform={'scale(1,.92)'}
         />
-        <PreviewRow
-          codeDisplay={codeDisplay}
-          fontWeight={fontWeight}
-          fontSize={fontSize}
-          font={'Jost'}
-          fontName={'Jost'}
-          htmlTag={htmlBodoni}
-          previewText={previewText}
-          transform={null}
-        />
+
         <PreviewRow
           codeDisplay={codeDisplay}
           fontWeight={fontWeight}
