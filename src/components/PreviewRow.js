@@ -3,12 +3,13 @@ import TableRow from '@mui/material/TableRow';
 import { Typography } from '@mui/material';
 import CodeBlock from './CodeBlock';
 
-export default function PreviewRow({ font, fontName, previewText, fontWeight, fontSize, codeDisplay }) {
+export default function PreviewRow({ font, transform, fontName, previewText, fontWeight, fontSize, codeDisplay, htmlTag }) {
   const styling = {
     fontFamily: font,
     fontSize: `${fontSize}em`,
     fontWeight: fontWeight,
     whiteSpace: 'nowrap',
+    transform: transform,
   };
 
   const fontInfo = (
@@ -23,7 +24,7 @@ export default function PreviewRow({ font, fontName, previewText, fontWeight, fo
       <TableCell sx={{ width: 'auto', paddingInline: 6 }} style={styling}>
         {previewText[0] === null || previewText.length === 0 ? fontName : previewText}
       </TableCell>
-      {codeDisplay ? <CodeBlock fontName={fontName} fontWeight={fontWeight} /> : null}
+      {codeDisplay ? <CodeBlock font={font} fontWeight={fontWeight} htmlTag={htmlTag} transform={transform} /> : null}
       {codeDisplay ? null : fontInfo}
     </TableRow>
   );

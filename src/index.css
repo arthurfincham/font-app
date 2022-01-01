@@ -39,15 +39,23 @@ body {
   margin: 0;
 }
 
-.codeBlock {
-  display: inline-block;
-  font-family: Menlo, Monaco, Consolas;
-  line-height: 1.4em;
-  font-size: 0.8em;
+pre {
+  display: block;
+  width: 400px;
+  overflow-x: hidden !important;
+  font-size: 0.9em;
   cursor: pointer;
   color: rgb(65, 65, 65);
-  width: 50%;
-  padding: 0.5em 0em 0.5em 0.5em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
   background-color: rgb(243, 243, 243);
   text-align: left;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.MuiTooltip-tooltip {
+  background-color: rgb(231, 231, 231) !important;
+  color: black !important;
+  font-size: 0.8em !important;
 }

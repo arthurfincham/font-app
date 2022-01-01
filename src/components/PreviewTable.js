@@ -1,8 +1,13 @@
 import PreviewRow from './PreviewRow';
 import Table from '@mui/material/Table';
 import TableContainer from '@mui/material/TableContainer';
+import { render } from '@testing-library/react';
 
 export default function PreviewTable({ fontSize, previewText, fontWeight, codeDisplay }) {
+  const htmlBodoni = (font) => {
+    return `<link href='https://fonts.googleapis.com/css2?family=${font}:wght@400;600;800&display=swap' rel='stylesheet' />`;
+  };
+
   return (
     <TableContainer>
       <Table aria-label="simple table">
@@ -12,7 +17,9 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           fontSize={fontSize}
           font={'Bodoni Moda'}
           fontName={'Bodoni'}
+          htmlTag={htmlBodoni}
           previewText={previewText}
+          transform={null}
         />
         <PreviewRow
           codeDisplay={codeDisplay}
@@ -20,24 +27,39 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           fontSize={fontSize}
           font={'EB Garamond'}
           fontName={'Garamond'}
+          htmlTag={htmlBodoni}
           previewText={previewText}
+          transform={null}
         />
         <PreviewRow
           codeDisplay={codeDisplay}
           fontWeight={fontWeight}
           fontSize={fontSize}
-          font={'Old Standard TT'}
-          fontName={'Old Standard'}
+          font={'Hind'}
+          fontName={'Hind'}
+          htmlTag={htmlBodoni}
           previewText={previewText}
+          transform={'scale(1,.92)'}
         />
-        <PreviewRow codeDisplay={codeDisplay} fontWeight={fontWeight} fontSize={fontSize} font={'Jost'} fontName={'Jost'} previewText={previewText} />
+        <PreviewRow
+          codeDisplay={codeDisplay}
+          fontWeight={fontWeight}
+          fontSize={fontSize}
+          font={'Jost'}
+          fontName={'Jost'}
+          htmlTag={htmlBodoni}
+          previewText={previewText}
+          transform={null}
+        />
         <PreviewRow
           codeDisplay={codeDisplay}
           fontWeight={fontWeight}
           fontSize={fontSize}
           font={'Inter'}
           fontName={'Inter'}
+          htmlTag={htmlBodoni}
           previewText={previewText}
+          transform={null}
         />
       </Table>
     </TableContainer>
