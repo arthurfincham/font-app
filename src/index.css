@@ -59,8 +59,3 @@ pre {
   color: black !important;
   font-size: 0.8em !important;
 }
-.selectRow {
-  display: flex;
-  gap: 1em;
-  margin-top: 6px;
-}

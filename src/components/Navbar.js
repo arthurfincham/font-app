@@ -29,6 +29,7 @@ export default function Navbar({
           display: 'flex',
           padding: '.5em 1em .5em 1em',
           justifyContent: 'space-between',
+          alignItems: 'center',
           border: (theme) => `1px solid ${theme.palette.divider}`,
           flexWrap: 'wrap',
         }}
