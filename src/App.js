@@ -2,17 +2,14 @@ import { useState, useRef, useEffect } from 'react';
 import PreviewTable from './components/PreviewTable';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme, yellowTheme } from './themes';
 import { GlobalStyles } from './global';
 
 function App() {
-  const [siteTheme, setSiteTheme] = useState('Light');
-
   const [previewText, setPreviewText] = useState([null]);
 
   const previewInput = useRef(null);
 
-  const [fontSize, setFontSize] = useState('1.5');
+  const [fontSize, setFontSize] = useState('2');
 
   const [fontWeight, setFontWeight] = useState('600');
 
@@ -22,16 +19,12 @@ function App() {
     setPreviewText(e.target.value);
   };
 
-  const themePicker = (theme) => {
-    if (theme === 'Light') {
-      return lightTheme;
-    }
-    if (theme === 'Dark') {
-      return darkTheme;
-    }
-    if (theme === 'Yellow') {
-      return yellowTheme;
-    }
+  const [bodyColor, setBodyColor] = useState('#FFF');
+  const [textColor, setTextColor] = useState('#000');
+
+  const colorTheme = {
+    body: bodyColor,
+    text: textColor,
   };
 
   useEffect(() => {
@@ -50,8 +43,10 @@ function App() {
   return (
     <>
       <Navbar
-        setSiteTheme={setSiteTheme}
-        siteTheme={siteTheme}
+        setBodyColor={setBodyColor}
+        bodyColor={bodyColor}
+        setTextColor={setTextColor}
+        textColor={textColor}
         setFontSize={setFontSize}
         updatePreviewText={updatePreviewText}
         setFontWeight={setFontWeight}
@@ -63,7 +58,7 @@ function App() {
         setCodeDisplay={setCodeDisplay}
       />
       <main>
-        <ThemeProvider theme={themePicker(siteTheme)}>
+        <ThemeProvider theme={colorTheme}>
           <GlobalStyles />
           <PreviewTable fontSize={fontSize} codeDisplay={codeDisplay} previewText={previewText} fontWeight={fontWeight} sx={{ height: '100%' }} />
         </ThemeProvider>

@@ -20,13 +20,13 @@ export default function FontSizeToggle({ fontSize, setFontSize }) {
   };
   return (
     <StyledToggleButtonGroup size="small" value={fontSize} exclusive onChange={handleSize} aria-label="text alignment">
-      <ToggleButton value="1" aria-label="left aligned">
+      <ToggleButton value="1.5" aria-label="left aligned">
         <StyledIcon size="1.5em" />
       </ToggleButton>
-      <ToggleButton value="1.5" aria-label="left aligned">
+      <ToggleButton value="2" aria-label="left aligned">
         <StyledIcon size="2.5em" />
       </ToggleButton>
-      <ToggleButton value="2" aria-label="left aligned">
+      <ToggleButton value="2.5" aria-label="left aligned">
         <StyledIcon size="3.5em" />
       </ToggleButton>
     </StyledToggleButtonGroup>

@@ -7,8 +7,10 @@ import FontSizeToggle from './FontSizeToggle';
 import CodeToggle from './CodeToggle';
 
 export default function Navbar({
-  setSiteTheme,
-  siteTheme,
+  setBodyColor,
+  bodyColor,
+  setTextColor,
+  textColor,
   previewInput,
   previewText,
   setFontSize,
@@ -35,7 +37,7 @@ export default function Navbar({
         <FontSizeToggle fontSize={fontSize} setFontSize={setFontSize} />
         <FontWeightToggle fontWeight={fontWeight} setFontWeight={setFontWeight} />
         <CodeToggle codeDisplay={codeDisplay} setCodeDisplay={setCodeDisplay} />
-        <ThemeToggle siteTheme={siteTheme} setSiteTheme={setSiteTheme} />
+        <ThemeToggle setBodyColor={setBodyColor} bodyColor={bodyColor} setTextColor={setTextColor} textColor={textColor} />
       </Paper>
     </Box>
   );

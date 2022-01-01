@@ -3,48 +3,71 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { styled } from '@mui/system';
 import InvertColorsIcon from '@mui/icons-material/InvertColors';
 import Paper from '@mui/material/Paper';
+import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
+import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
-export default function ThemeToggle({ siteTheme, setSiteTheme }) {
+export default function ThemeToggle({ setBodyColor, bodyColor, setTextColor, textColor }) {
   const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
     '& .MuiToggleButtonGroup-grouped': {
       margin: '5px 0px ',
     },
+    '& .MuiToggleButtonGroup-grouped:not(:first-of-type)': {
+      borderLeft: '1px solid #BABABA',
+    },
   }));
 
-  const StyledBackground = styled(Paper)(({ color }) => ({
-    backgroundColor: color,
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '35px',
-    width: '35px',
+  const StyledToggleButton = styled(ToggleButton)(({ color }) => ({
+    backgroundColor: '#EBEBEB',
+    border: '1px solid #BABABA',
   }));
 
-  const handleSiteTheme = (event, newSiteTheme) => {
-    setSiteTheme(newSiteTheme);
+  const handleBodyColor = (event, newSiteTheme) => {
+    setBodyColor(newSiteTheme);
   };
 
-  const StyledIcon = styled(InvertColorsIcon)(({ color }) => ({
+  const handleTextColor = (event, newSiteTheme) => {
+    setTextColor(newSiteTheme);
+  };
+
+  const StyledBodyIcon = styled(FormatColorFillIcon)(({ color }) => ({
     color: color,
+    fontSize: '2em',
+  }));
+
+  const StyledTextIcon = styled(FormatColorTextIcon)(({ color }) => ({
+    color: color,
+    fontSize: '2em',
   }));
 
   return (
-    <StyledToggleButtonGroup size="small" value={siteTheme} exclusive onChange={handleSiteTheme} aria-label="site theme">
-      <ToggleButton value="Dark" aria-label="left aligned">
-        <StyledBackground color="#232324">
-          <StyledIcon color="#FFF" />
-        </StyledBackground>
-      </ToggleButton>
-      <ToggleButton value="Light" aria-label="left aligned">
-        <StyledBackground color="#FFF">
-          <StyledIcon color="#000" />
-        </StyledBackground>
-      </ToggleButton>
-      <ToggleButton value="Yellow" aria-label="left aligned">
-        <StyledBackground color="#FFF4C7">
-          <StyledIcon color="#312E80" />
-        </StyledBackground>
-      </ToggleButton>
-    </StyledToggleButtonGroup>
+    <>
+      <StyledToggleButtonGroup size="small" value={bodyColor} exclusive onChange={handleBodyColor} aria-label="site theme">
+        <StyledToggleButton value="#FFF" aria-label="left aligned">
+          <StyledBodyIcon color="#FFF" />
+        </StyledToggleButton>
+        <StyledToggleButton value="#FEF3C7" aria-label="left aligned">
+          <StyledBodyIcon color="#FEF3C7" />
+        </StyledToggleButton>
+        <StyledToggleButton value="#272C35" aria-label="left aligned">
+          <StyledBodyIcon color="#272C35" />
+        </StyledToggleButton>
+      </StyledToggleButtonGroup>
+
+      <StyledToggleButtonGroup size="small" value={textColor} exclusive onChange={handleTextColor} aria-label="site theme">
+        <StyledToggleButton value="#FFF" aria-label="left aligned">
+          <StyledTextIcon color="#FFF" />
+        </StyledToggleButton>
+        <StyledToggleButton value="#FEF3C7" aria-label="left aligned">
+          <StyledTextIcon color="#FEF3C7" />
+        </StyledToggleButton>
+        <StyledToggleButton value="#272C35" aria-label="left aligned">
+          <StyledTextIcon color="#272C35" />
+        </StyledToggleButton>
+      </StyledToggleButtonGroup>
+    </>
   );
 }
