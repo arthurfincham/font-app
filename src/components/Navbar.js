@@ -35,6 +35,10 @@ export default function Navbar({
             xs: 'column',
             md: 'row',
           },
+          height: {
+            xs: '120px',
+            md: '70px',
+          },
           padding: '.5em 1em .5em 1em',
           justifyContent: 'space-between',
           alignItems: 'center',

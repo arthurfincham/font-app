@@ -4,7 +4,11 @@ import TableContainer from '@mui/material/TableContainer';
 import { render } from '@testing-library/react';
 
 export default function PreviewTable({ fontSize, previewText, fontWeight, codeDisplay, fontItalic }) {
-  const htmlBodoni = (font) => {
+  const htmlItalic = (font) => {
+    return `<link href='https://fonts.googleapis.com/css2?family=${font}:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap' rel='stylesheet' />`;
+  };
+
+  const htmlNormal = (font) => {
     return `<link href='https://fonts.googleapis.com/css2?family=${font}:wght@400;500;600;700;800&display=swap' rel='stylesheet' />`;
   };
 
@@ -17,7 +21,7 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           fontSize={fontSize}
           font={'Bodoni Moda'}
           fontName={'Bodoni'}
-          htmlTag={htmlBodoni}
+          htmlTag={htmlItalic}
           fontItalic={fontItalic}
           previewText={previewText}
           transform={null}
@@ -28,7 +32,7 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           fontSize={fontSize}
           font={'EB Garamond'}
           fontName={'Garamond'}
-          htmlTag={htmlBodoni}
+          htmlTag={htmlItalic}
           fontItalic={fontItalic}
           previewText={previewText}
           transform={null}
@@ -39,7 +43,7 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           fontSize={fontSize}
           font={'Hind'}
           fontName={'Hind'}
-          htmlTag={htmlBodoni}
+          htmlTag={htmlNormal}
           previewText={previewText}
           transform={'scale(1,.92)'}
         />
@@ -50,7 +54,7 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           fontSize={fontSize}
           font={'Inter'}
           fontName={'Inter'}
-          htmlTag={htmlBodoni}
+          htmlTag={htmlNormal}
           previewText={previewText}
           transform={null}
         />
