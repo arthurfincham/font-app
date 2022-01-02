@@ -1,10 +1,9 @@
+import { useState } from 'react';
 import TableCell from '@mui/material/TableCell';
+import Tooltip from '@mui/material/Tooltip';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { grayscale } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-import Tooltip from '@mui/material/Tooltip';
-
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import { useState } from 'react';
 
 export default function CodeBlock({ font, fontWeight, htmlTag, transform, fontItalic }) {
   const transForm = `\ntransform: '${transform}';`;

@@ -1,13 +1,10 @@
 import PreviewInput from './PreviewInput';
 import NavWrapper from './NavWrapper';
 import ToggleWrapper from './ToggleWrapper';
-import Paper from '@mui/material/Paper';
-
 import FontWeight from './toggles/FontWeight';
 import FontSize from './toggles/FontSize';
 import Dropdown from './toggles/Dropdown';
 import Single from './toggles/Single';
-
 import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
 import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
 import FormatItalicIcon from '@mui/icons-material/FormatItalic';

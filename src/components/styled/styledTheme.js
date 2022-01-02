@@ -27,12 +27,12 @@ export const DropdownToggleGroup = styled(ToggleButtonGroup)(() => ({
   },
 }));
 
-export const MyToggleButton = styled(ToggleButton)(() => ({
+export const DropdownToggle = styled(ToggleButton)(() => ({
   backgroundColor: '#EBEBEB',
   border: '1px solid #BABABA',
 }));
 
-export const MyCircle = styled(CircleIcon)(({ color }) => ({
+export const DropdownCircle = styled(CircleIcon)(({ color }) => ({
   color: color,
   fontSize: '2em',
   boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Collapse from '@mui/material/Collapse';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Box from '@mui/material/Box';
-import { DropdownToggleGroup, MyToggleButton, MyCircle } from '../styled/styledTheme';
+import { DropdownToggleGroup, DropdownToggle, DropdownCircle } from '../styled/styledTheme';
 
 export default function Dropdown({ state, setState, icon }) {
   const themeColors = ['#FFF', '#FEF3C7', '#272C35', '#6366F2', '#F23C1F', '#D4D1FF', '#FA8C1E'];
@@ -33,9 +33,9 @@ export default function Dropdown({ state, setState, icon }) {
         <DropdownToggleGroup size="small" value={state} exclusive onChange={handleColor} aria-label="site theme" orientation="vertical">
           {themeColors.map((color) => {
             return (
-              <MyToggleButton value={color} aria-label="left aligned" sx={{ zIndex: 10 }}>
-                <MyCircle color={color} />
-              </MyToggleButton>
+              <DropdownToggle value={color} aria-label="left aligned" sx={{ zIndex: 10 }}>
+                <DropdownCircle color={color} />
+              </DropdownToggle>
             );
           })}
         </DropdownToggleGroup>
