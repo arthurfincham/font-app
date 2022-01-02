@@ -2,13 +2,13 @@ import ToggleButton from '@mui/material/ToggleButton';
 import { StyledToggleButtonGroup } from '../styled/styledTheme';
 
 import { Typography } from '@mui/material';
-import MyTooltip from '../MyTooltip';
+import ToggleTooltip from '../ToggleTooltip';
 export default function FontWeight({ fontWeight, setFontWeight }) {
   const handleWeight = (event, newAlignment) => {
     setFontWeight(newAlignment);
   };
   return (
-    <MyTooltip title="Weight">
+    <ToggleTooltip title="Weight">
       <StyledToggleButtonGroup size="small" value={fontWeight} exclusive onChange={handleWeight} aria-label="text alignment">
         <ToggleButton value="400" aria-label="left aligned">
           <Typography variant="button" sx={{ fontWeight: 'bold' }}>
@@ -36,6 +36,6 @@ export default function FontWeight({ fontWeight, setFontWeight }) {
           </Typography>
         </ToggleButton>
       </StyledToggleButtonGroup>
-    </MyTooltip>
+    </ToggleTooltip>
   );
 }

@@ -2,7 +2,7 @@ import ToggleButton from '@mui/material/ToggleButton';
 import { StyledToggleButtonGroup } from '../styled/styledTheme';
 
 import { styled } from '@mui/system';
-import MyTooltip from '../MyTooltip';
+import ToggleTooltip from '../ToggleTooltip';
 
 import AbcIcon from '@mui/icons-material/Abc';
 
@@ -15,7 +15,7 @@ export default function FontSize({ fontSize, setFontSize }) {
     setFontSize(newAlignment);
   };
   return (
-    <MyTooltip title="Size">
+    <ToggleTooltip title="Size">
       <StyledToggleButtonGroup size="small" value={fontSize} exclusive onChange={handleSize} aria-label="text alignment">
         <ToggleButton value="1.5" aria-label="left aligned">
           <StyledIcon size="1.5em" />
@@ -27,6 +27,6 @@ export default function FontSize({ fontSize, setFontSize }) {
           <StyledIcon size="3.5em" />
         </ToggleButton>
       </StyledToggleButtonGroup>
-    </MyTooltip>
+    </ToggleTooltip>
   );
 }
