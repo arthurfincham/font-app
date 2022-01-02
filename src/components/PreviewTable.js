@@ -14,49 +14,51 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
   return (
     <TableContainer>
       <Table aria-label="simple table">
-        <PreviewRow
-          codeDisplay={codeDisplay}
-          fontWeight={fontWeight}
-          fontSize={fontSize}
-          font={'Bodoni Moda'}
-          fontName={'Bodoni'}
-          htmlTag={htmlItalic}
-          fontItalic={fontItalic}
-          previewText={previewText}
-          transform={null}
-        />
-        <PreviewRow
-          codeDisplay={codeDisplay}
-          fontWeight={fontWeight}
-          fontSize={fontSize}
-          font={'EB Garamond'}
-          fontName={'Garamond'}
-          htmlTag={htmlItalic}
-          fontItalic={fontItalic}
-          previewText={previewText}
-          transform={null}
-        />
-        <PreviewRow
-          codeDisplay={codeDisplay}
-          fontWeight={fontWeight}
-          fontSize={fontSize}
-          font={'Hind'}
-          fontName={'Hind'}
-          htmlTag={htmlNormal}
-          previewText={previewText}
-          transform={'scale(1,.92)'}
-        />
+        <tbody>
+          <PreviewRow
+            codeDisplay={codeDisplay}
+            fontWeight={fontWeight}
+            fontSize={fontSize}
+            font={'Bodoni Moda'}
+            fontName={'Bodoni'}
+            htmlTag={htmlItalic}
+            fontItalic={fontItalic}
+            previewText={previewText}
+            transform={null}
+          />
+          <PreviewRow
+            codeDisplay={codeDisplay}
+            fontWeight={fontWeight}
+            fontSize={fontSize}
+            font={'EB Garamond'}
+            fontName={'Garamond'}
+            htmlTag={htmlItalic}
+            fontItalic={fontItalic}
+            previewText={previewText}
+            transform={null}
+          />
+          <PreviewRow
+            codeDisplay={codeDisplay}
+            fontWeight={fontWeight}
+            fontSize={fontSize}
+            font={'Hind'}
+            fontName={'Hind'}
+            htmlTag={htmlNormal}
+            previewText={previewText}
+            transform={'scale(1,.92)'}
+          />
 
-        <PreviewRow
-          codeDisplay={codeDisplay}
-          fontWeight={fontWeight}
-          fontSize={fontSize}
-          font={'Inter'}
-          fontName={'Inter'}
-          htmlTag={htmlNormal}
-          previewText={previewText}
-          transform={null}
-        />
+          <PreviewRow
+            codeDisplay={codeDisplay}
+            fontWeight={fontWeight}
+            fontSize={fontSize}
+            font={'Inter'}
+            fontName={'Inter'}
+            htmlTag={htmlNormal}
+            previewText={previewText}
+            transform={null}
+          />
+        </tbody>
       </Table>
     </TableContainer>
   );

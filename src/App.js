@@ -59,7 +59,6 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(previewText.length);
     previewInput.current.dispatchEvent(
       new Event('change', {
         detail: {

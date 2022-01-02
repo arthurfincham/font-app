@@ -1,7 +1,6 @@
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import ToggleButton from '@mui/material/ToggleButton';
 import CircleIcon from '@mui/icons-material/Circle';
-import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/system';
 
 export const DropdownToggleGroup = styled(ToggleButtonGroup)(() => ({

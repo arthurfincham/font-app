@@ -10,11 +10,11 @@ export default function CodeSnippet({ language, preview, content }) {
   return (
     <CopyToClipboard text={content}>
       <Tooltip title={copied ? 'Copied!' : language} placement="left">
-        <div>
+        <>
           <SyntaxHighlighter language={language} style={grayscale} wrapLongLines={true} onClick={() => setCopied(true)}>
             {preview}
           </SyntaxHighlighter>
-        </div>
+        </>
       </Tooltip>
     </CopyToClipboard>
   );

@@ -15,10 +15,12 @@ export default function PreviewRow({ font, transform, fontName, previewText, fon
   };
 
   const fontInfo = (
-    <div className="fontRowInfo">
-      <Typography>{fontName}</Typography>
-      <Typography>{fontWeight}</Typography>
-    </div>
+    <td>
+      <div className="fontRowInfo">
+        <Typography>{fontName}</Typography>
+        <Typography>{fontWeight}</Typography>
+      </div>
+    </td>
   );
 
   return (

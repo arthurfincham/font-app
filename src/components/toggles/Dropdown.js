@@ -22,7 +22,7 @@ export default function Dropdown({ state, setState, icon }) {
     <Box sx={{ width: '50px', position: 'relative', marginInline: '5px' }}>
       <FormControlLabel
         control={
-          <ToggleButton checked={checked} onChange={handleCheck}>
+          <ToggleButton value={checked} onChange={handleCheck}>
             {icon}
           </ToggleButton>
         }
@@ -33,7 +33,7 @@ export default function Dropdown({ state, setState, icon }) {
         <DropdownToggleGroup size="small" value={state} exclusive onChange={handleColor} aria-label="site theme" orientation="vertical">
           {themeColors.map((color) => {
             return (
-              <DropdownToggle value={color} aria-label="left aligned" sx={{ zIndex: 10 }}>
+              <DropdownToggle key={color} value={color} aria-label="left aligned" sx={{ zIndex: 10 }}>
                 <DropdownCircle color={color} />
               </DropdownToggle>
             );
