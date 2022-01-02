@@ -43,6 +43,7 @@ export default function Navbar({
           justifyContent: 'space-between',
           maxWidth: '100%',
           alignItems: 'center',
+          backgroundColor: '#EBEBEB',
           border: (theme) => `1px solid ${theme.palette.divider}`,
         }}
       >
@@ -58,6 +59,7 @@ export default function Navbar({
               xs: '100%',
               md: 'auto',
             },
+            backgroundColor: '#EBEBEB',
           }}
         >
           <FontSize fontSize={fontSize} setFontSize={setFontSize} />

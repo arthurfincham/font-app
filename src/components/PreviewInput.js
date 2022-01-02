@@ -8,7 +8,7 @@ export default function PreviewInput({ updatePreviewText, previewInput, previewT
         value={previewText}
         ref={previewInput}
         placeholder="Please enter text"
-        sx={{ height: '50px' }}
+        sx={{ height: '50px', backgroundColor: 'white' }}
         onChange={(e) => updatePreviewText(e)}
       />
     </FormControl>
