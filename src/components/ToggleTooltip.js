@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/system';
 
-export default function MyTooltip({ title, children }) {
+export default function ToggleTooltip({ title, children }) {
   const CustomTooltip = styled(({ className, ...props }) => <Tooltip {...props} classes={{ popper: className }} />)({
     [`& .${tooltipClasses.tooltip}`]: {
       maxWidth: 120,
