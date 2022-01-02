@@ -13,7 +13,7 @@ export default function FontWeight({ fontWeight, setFontWeight }) {
     setFontWeight(newAlignment);
   };
   return (
-    <MyTooltip title="Font Weight">
+    <MyTooltip title="Weight">
       <StyledToggleButtonGroup size="small" value={fontWeight} exclusive onChange={handleWeight} aria-label="text alignment">
         <ToggleButton value="400" aria-label="left aligned">
           <Typography variant="button" sx={{ fontWeight: 'bold' }}>

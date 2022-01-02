@@ -20,7 +20,7 @@ export default function FontSize({ fontSize, setFontSize }) {
     setFontSize(newAlignment);
   };
   return (
-    <MyTooltip title="Font Size">
+    <MyTooltip title="Size">
       <StyledToggleButtonGroup size="small" value={fontSize} exclusive onChange={handleSize} aria-label="text alignment">
         <ToggleButton value="1.5" aria-label="left aligned">
           <StyledIcon size="1.5em" />

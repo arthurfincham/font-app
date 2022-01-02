@@ -16,12 +16,12 @@ export default function FontItalic({ fontItalic, setFontItalic }) {
   };
 
   return (
-    <StyledToggleButtonGroup size="small" value={false} exclusive onChange={handleToggle} aria-label="code snippet">
-      <MyTooltip title="Italic" subTitle="Please note that not all fonts are italic.">
+    <MyTooltip title="Italic">
+      <StyledToggleButtonGroup size="small" value={false} exclusive onChange={handleToggle} aria-label="code snippet">
         <ToggleButton value={!fontItalic} aria-label="left aligned">
           <FormatItalicIcon size="1.5em" />
         </ToggleButton>
-      </MyTooltip>
-    </StyledToggleButtonGroup>
+      </StyledToggleButtonGroup>
+    </MyTooltip>
   );
 }

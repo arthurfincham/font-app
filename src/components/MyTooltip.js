@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/system';
 
-export default function MyTooltip({ title, subTitle, children }) {
+export default function MyTooltip({ title, children }) {
   const CustomTooltip = styled(({ className, ...props }) => <Tooltip {...props} classes={{ popper: className }} />)({
     [`& .${tooltipClasses.tooltip}`]: {
       maxWidth: 120,
@@ -20,15 +20,11 @@ export default function MyTooltip({ title, subTitle, children }) {
       <Typography variant="caption" sx={{ fontSize: '1em' }}>
         {title}
       </Typography>
-      <br></br>
-      <Typography variant="caption" sx={{ fontSize: '.8em', lineHeight: '.7em' }}>
-        {subTitle}
-      </Typography>
     </Box>
   );
 
   return (
-    <CustomTooltip title={tooltipInfo} enterDelay={800} enterNextDelay={400}>
+    <CustomTooltip title={tooltipInfo} enterDelay={900} enterNextDelay={400}>
       {children}
     </CustomTooltip>
   );
