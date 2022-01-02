@@ -1,10 +1,8 @@
 import ToggleButton from '@mui/material/ToggleButton';
-import { StyledToggleButtonGroup } from '../styled/styledTheme';
-
+import AbcIcon from '@mui/icons-material/Abc';
 import { styled } from '@mui/system';
 import ToggleTooltip from '../ToggleTooltip';
-
-import AbcIcon from '@mui/icons-material/Abc';
+import { StyledToggleButtonGroup } from '../styled/styledTheme';
 
 export default function FontSize({ fontSize, setFontSize }) {
   const StyledIcon = styled(AbcIcon)(({ size }) => ({
