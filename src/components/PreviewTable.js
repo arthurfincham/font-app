@@ -1,7 +1,6 @@
 import PreviewRow from './PreviewRow';
 import Table from '@mui/material/Table';
 import TableContainer from '@mui/material/TableContainer';
-import { render } from '@testing-library/react';
 
 export default function PreviewTable({ fontSize, previewText, fontWeight, codeDisplay, fontItalic }) {
   const htmlItalic = (font) => {

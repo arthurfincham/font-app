@@ -3,7 +3,6 @@ import PreviewTable from './components/PreviewTable';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from 'styled-components';
 import { createTheme } from '@mui/material/styles';
-
 import { GlobalStyles } from './global';
 
 function App() {
