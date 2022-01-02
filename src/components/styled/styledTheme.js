@@ -17,6 +17,10 @@ export const MyToggleButtonGroup = styled(ToggleButtonGroup)(() => ({
     backgroundColor: '#EBEBEB',
     opacity: 1,
   },
+  '& .MuiToggleButtonGroup-grouped.Mui-selected:hover': {
+    backgroundColor: '#EBEBEB',
+    opacity: 1,
+  },
   '& .MuiToggleButtonGroup-grouped:not(:first-of-type)': {
     borderTop: '1px solid #BABABA',
   },
