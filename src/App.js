@@ -40,6 +40,24 @@ function App() {
     },
   });
 
+  const navProps = {
+    setBodyColor,
+    bodyColor,
+    setTextColor,
+    textColor,
+    setFontSize,
+    fontSize,
+    updatePreviewText,
+    previewText,
+    setFontWeight,
+    fontWeight,
+    setCodeDisplay,
+    codeDisplay,
+    setFontItalic,
+    fontItalic,
+    previewInput,
+  };
+
   useEffect(() => {
     console.log(previewText.length);
     previewInput.current.dispatchEvent(
@@ -55,23 +73,7 @@ function App() {
 
   return (
     <>
-      <Navbar
-        setBodyColor={setBodyColor}
-        bodyColor={bodyColor}
-        setTextColor={setTextColor}
-        textColor={textColor}
-        setFontSize={setFontSize}
-        updatePreviewText={updatePreviewText}
-        setFontWeight={setFontWeight}
-        fontWeight={fontWeight}
-        fontSize={fontSize}
-        previewInput={previewInput}
-        previewText={previewText}
-        codeDisplay={codeDisplay}
-        setCodeDisplay={setCodeDisplay}
-        fontItalic={fontItalic}
-        setFontItalic={setFontItalic}
-      />
+      <Navbar {...navProps} />
       <main>
         <ThemeProvider theme={colorTheme}>
           <GlobalStyles />
