@@ -1,17 +1,10 @@
 import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import { styled } from '@mui/system';
+import { StyledToggleButtonGroup } from '../styled/styledTheme';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 import CodeIcon from '@mui/icons-material/Code';
 import MyTooltip from '../MyTooltip';
 
 export default function CodeSnippet({ codeDisplay, setCodeDisplay }) {
-  const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
-    '& .MuiToggleButtonGroup-grouped': {
-      margin: '5px 0px ',
-    },
-  }));
-
   const handleCode = (event, newCode) => {
     setCodeDisplay(newCode);
   };

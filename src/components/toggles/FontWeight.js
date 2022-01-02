@@ -1,14 +1,9 @@
 import ToggleButton from '@mui/material/ToggleButton';
-import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
-import { styled } from '@mui/system';
+import { StyledToggleButtonGroup } from '../styled/styledTheme';
+
 import { Typography } from '@mui/material';
 import MyTooltip from '../MyTooltip';
 export default function FontWeight({ fontWeight, setFontWeight }) {
-  const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
-    '& .MuiToggleButtonGroup-grouped': {
-      margin: '5px 0px ',
-    },
-  }));
   const handleWeight = (event, newAlignment) => {
     setFontWeight(newAlignment);
   };

@@ -39,3 +39,9 @@ export const MyCircle = styled(CircleIcon)(({ color }) => ({
   borderRadius: '50%',
   backgroundColor: 'black',
 }));
+
+export const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
+  '& .MuiToggleButtonGroup-grouped': {
+    margin: '5px 0px ',
+  },
+}));

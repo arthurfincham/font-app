@@ -2,11 +2,12 @@ import PreviewInput from './PreviewInput';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import FontWeight from './toggles/FontWeight';
-import TextColor from './toggles/TextColor';
-import BodyColor from './toggles/BodyColor';
 import FontSize from './toggles/FontSize';
 import FontItalic from './toggles/FontItalic';
+import Dropdown from './toggles/Dropdown';
 import CodeSnippet from './toggles/CodeSnippet';
+import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
+import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
 
 export default function Navbar({
   setBodyColor,
@@ -66,8 +67,8 @@ export default function Navbar({
           <FontWeight fontWeight={fontWeight} setFontWeight={setFontWeight} />
           <FontItalic fontItalic={fontItalic} setFontItalic={setFontItalic} />
           <CodeSnippet codeDisplay={codeDisplay} setCodeDisplay={setCodeDisplay} />
-          <BodyColor setBodyColor={setBodyColor} bodyColor={bodyColor} />
-          <TextColor setTextColor={setTextColor} textColor={textColor} />
+          <Dropdown setState={setBodyColor} state={bodyColor} icon={<FormatColorFillIcon htmlColor={bodyColor} />} />
+          <Dropdown setState={setTextColor} state={textColor} icon={<FormatColorTextIcon htmlColor={textColor} />} />
         </Paper>
       </Paper>
     </Box>
