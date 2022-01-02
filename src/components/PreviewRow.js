@@ -26,7 +26,7 @@ export default function PreviewRow({ font, transform, fontName, previewText, fon
       <TableCell sx={{ width: 'auto', paddingInline: 6 }} style={styling}>
         {previewText[0] === null || previewText.length === 0 ? fontName : previewText}
       </TableCell>
-      {codeDisplay ? <CodeBlock font={font} fontWeight={fontWeight} htmlTag={htmlTag} transform={transform} /> : null}
+      {codeDisplay ? <CodeBlock font={font} fontWeight={fontWeight} htmlTag={htmlTag} transform={transform} fontItalic={fontItalic} /> : null}
       {codeDisplay ? null : fontInfo}
     </TableRow>
   );

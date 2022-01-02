@@ -6,9 +6,10 @@ import Tooltip from '@mui/material/Tooltip';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useState } from 'react';
 
-export default function CodeBlock({ font, fontWeight, htmlTag, transform }) {
+export default function CodeBlock({ font, fontWeight, htmlTag, transform, fontItalic }) {
   const transForm = `\ntransform: '${transform}';`;
-  const cssBlock = `font-family: '${font}';\nfont-weight: '${fontWeight}';${transform ? transForm : ''}`;
+  const italicStyle = `\nfont-style: 'italic';`;
+  const cssBlock = `font-family: '${font}';\nfont-weight: '${fontWeight}';${transform ? transForm : ''}${fontItalic ? italicStyle : ''}`;
 
   const [copiedHTML, setCopiedHTML] = useState(false);
 
