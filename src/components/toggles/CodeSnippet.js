@@ -3,6 +3,7 @@ import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
 import { styled } from '@mui/system';
 import CodeOffIcon from '@mui/icons-material/CodeOff';
 import CodeIcon from '@mui/icons-material/Code';
+import MyTooltip from '../MyTooltip';
 
 export default function CodeSnippet({ codeDisplay, setCodeDisplay }) {
   const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
@@ -17,9 +18,11 @@ export default function CodeSnippet({ codeDisplay, setCodeDisplay }) {
 
   return (
     <StyledToggleButtonGroup size="small" value={false} exclusive onChange={handleCode} aria-label="code snippet">
-      <ToggleButton value={!codeDisplay} aria-label="left aligned">
-        {codeDisplay ? <CodeOffIcon size="1.5em" /> : <CodeIcon size="1.5em" />}
-      </ToggleButton>
+      <MyTooltip title="Code Snippets" subTitle="Click on the code block to copy to your clipboard!">
+        <ToggleButton value={!codeDisplay} aria-label="left aligned">
+          {codeDisplay ? <CodeOffIcon size="1.5em" /> : <CodeIcon size="1.5em" />}
+        </ToggleButton>
+      </MyTooltip>
     </StyledToggleButtonGroup>
   );
 }

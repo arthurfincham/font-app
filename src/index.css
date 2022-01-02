@@ -53,9 +53,3 @@ pre {
   border-radius: 5px;
   margin: 10px;
 }
-
-.MuiTooltip-tooltip {
-  background-color: rgb(231, 231, 231) !important;
-  color: black !important;
-  font-size: 0.8em !important;
-}
