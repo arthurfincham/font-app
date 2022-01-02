@@ -4,7 +4,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Tooltip, { tooltipClasses } from '@mui/material/Tooltip';
 import { styled } from '@mui/system';
 
-export const MyToggleButtonGroup = styled(ToggleButtonGroup)(() => ({
+export const DropdownToggleGroup = styled(ToggleButtonGroup)(() => ({
   '& .MuiToggleButtonGroup-grouped': {
     margin: '0px 0px ',
     backgroundColor: '#FFF',
