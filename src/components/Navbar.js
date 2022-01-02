@@ -3,11 +3,14 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import FontWeight from './toggles/FontWeight';
 import FontSize from './toggles/FontSize';
-import FontItalic from './toggles/FontItalic';
 import Dropdown from './toggles/Dropdown';
-import CodeSnippet from './toggles/CodeSnippet';
+import Single from './toggles/Single';
+
 import FormatColorTextIcon from '@mui/icons-material/FormatColorText';
 import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+
+import CodeIcon from '@mui/icons-material/Code';
 
 export default function Navbar({
   setBodyColor,
@@ -65,8 +68,8 @@ export default function Navbar({
         >
           <FontSize fontSize={fontSize} setFontSize={setFontSize} />
           <FontWeight fontWeight={fontWeight} setFontWeight={setFontWeight} />
-          <FontItalic fontItalic={fontItalic} setFontItalic={setFontItalic} />
-          <CodeSnippet codeDisplay={codeDisplay} setCodeDisplay={setCodeDisplay} />
+          <Single state={fontItalic} setState={setFontItalic} title="Italic" icon={<FormatItalicIcon size="1.5em" />} />
+          <Single state={codeDisplay} setState={setCodeDisplay} title="Code Snippets" icon={<CodeIcon size="1.5em" />} />
           <Dropdown setState={setBodyColor} state={bodyColor} icon={<FormatColorFillIcon htmlColor={bodyColor} />} />
           <Dropdown setState={setTextColor} state={textColor} icon={<FormatColorTextIcon htmlColor={textColor} />} />
         </Paper>
