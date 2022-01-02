@@ -3,7 +3,7 @@ import OutlinedInput from '@mui/material/OutlinedInput';
 
 export default function PreviewInput({ updatePreviewText, previewInput, previewText }) {
   return (
-    <FormControl sx={{ width: '50ch', display: 'flex', justifyContent: 'center' }}>
+    <FormControl sx={{ width: { lg: '30%', md: '40%', xs: '100%' }, display: 'flex', justifyContent: 'center' }}>
       <OutlinedInput
         value={previewText}
         ref={previewInput}

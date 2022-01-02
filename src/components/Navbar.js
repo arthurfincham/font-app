@@ -28,19 +28,37 @@ export default function Navbar({
         elevation={0}
         sx={{
           display: 'flex',
+          flexDirection: {
+            xs: 'column',
+            md: 'row',
+          },
           padding: '.5em 1em .5em 1em',
           justifyContent: 'space-between',
           alignItems: 'center',
           border: (theme) => `1px solid ${theme.palette.divider}`,
-          flexWrap: 'wrap',
         }}
       >
         <PreviewInput updatePreviewText={updatePreviewText} previewInput={previewInput} previewText={previewText} />
-        <FontSize fontSize={fontSize} setFontSize={setFontSize} />
-        <FontWeight fontWeight={fontWeight} setFontWeight={setFontWeight} />
-        <CodeSnippet codeDisplay={codeDisplay} setCodeDisplay={setCodeDisplay} />
-        <BodyColor setBodyColor={setBodyColor} bodyColor={bodyColor} />
-        <TextColor setTextColor={setTextColor} textColor={textColor} />
+        <Paper
+          elevation={0}
+          sx={{
+            display: 'flex',
+            padding: '.5em 1em .5em 1em',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            width: {
+              xs: '100%',
+              md: 'auto',
+              lg: 'auto',
+            },
+          }}
+        >
+          <FontSize fontSize={fontSize} setFontSize={setFontSize} />
+          <FontWeight fontWeight={fontWeight} setFontWeight={setFontWeight} />
+          <CodeSnippet codeDisplay={codeDisplay} setCodeDisplay={setCodeDisplay} />
+          <BodyColor setBodyColor={setBodyColor} bodyColor={bodyColor} />
+          <TextColor setTextColor={setTextColor} textColor={textColor} />
+        </Paper>
       </Paper>
     </Box>
   );

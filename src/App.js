@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import PreviewTable from './components/PreviewTable';
 import Navbar from './components/Navbar';
 import { ThemeProvider } from 'styled-components';
+import { createTheme } from '@mui/material/styles';
+
 import { GlobalStyles } from './global';
 
 function App() {
@@ -22,10 +24,20 @@ function App() {
   const [bodyColor, setBodyColor] = useState('#FFF');
   const [textColor, setTextColor] = useState('#000');
 
-  const colorTheme = {
+  const colorTheme = createTheme({
     body: bodyColor,
     text: textColor,
-  };
+    breakpoints: {
+      values: {
+        xxs: 0, // small phone
+        xs: 300, // phone
+        sm: 600, // tablets
+        md: 900, // small laptop
+        lg: 1200, // desktop
+        xl: 1536, // large screens
+      },
+    },
+  });
 
   useEffect(() => {
     console.log(previewText.length);
