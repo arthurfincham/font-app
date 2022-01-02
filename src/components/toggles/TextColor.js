@@ -24,7 +24,7 @@ export default function TextColor({ setTextColor, textColor }) {
       <FormControlLabel
         control={
           <ToggleButton checked={checked} onChange={handleCheck}>
-            <FormatColorTextIcon />
+            <FormatColorTextIcon htmlColor={textColor} />
           </ToggleButton>
         }
         label=""

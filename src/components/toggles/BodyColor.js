@@ -24,7 +24,7 @@ export default function BodyColor({ setBodyColor, bodyColor }) {
       <FormControlLabel
         control={
           <ToggleButton checked={checked} onChange={handleCheck}>
-            <FormatColorFillIcon />
+            <FormatColorFillIcon htmlColor={bodyColor} />
           </ToggleButton>
         }
         label=""
