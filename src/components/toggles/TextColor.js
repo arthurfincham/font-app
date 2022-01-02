@@ -20,7 +20,7 @@ export default function TextColor({ setTextColor, textColor }) {
   };
 
   return (
-    <Box sx={{ width: '50px', position: 'relative' }}>
+    <Box sx={{ width: '50px', position: 'relative', marginInline: '5px' }}>
       <FormControlLabel
         control={
           <ToggleButton checked={checked} onChange={handleCheck}>

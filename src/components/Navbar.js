@@ -41,6 +41,7 @@ export default function Navbar({
           },
           padding: '.5em 1em .5em 1em',
           justifyContent: 'space-between',
+          maxWidth: '100%',
           alignItems: 'center',
           border: (theme) => `1px solid ${theme.palette.divider}`,
         }}
@@ -56,7 +57,6 @@ export default function Navbar({
             width: {
               xs: '100%',
               md: 'auto',
-              lg: '40%',
             },
           }}
         >
