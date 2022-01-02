@@ -17,6 +17,8 @@ function App() {
 
   const [codeDisplay, setCodeDisplay] = useState(false);
 
+  const [fontItalic, setFontItalic] = useState(false);
+
   const updatePreviewText = (e) => {
     setPreviewText(e.target.value);
   };
@@ -68,11 +70,20 @@ function App() {
         previewText={previewText}
         codeDisplay={codeDisplay}
         setCodeDisplay={setCodeDisplay}
+        fontItalic={fontItalic}
+        setFontItalic={setFontItalic}
       />
       <main>
         <ThemeProvider theme={colorTheme}>
           <GlobalStyles />
-          <PreviewTable fontSize={fontSize} codeDisplay={codeDisplay} previewText={previewText} fontWeight={fontWeight} sx={{ height: '100%' }} />
+          <PreviewTable
+            fontSize={fontSize}
+            fontItalic={fontItalic}
+            codeDisplay={codeDisplay}
+            previewText={previewText}
+            fontWeight={fontWeight}
+            sx={{ height: '100%' }}
+          />
         </ThemeProvider>
       </main>
     </>

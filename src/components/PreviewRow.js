@@ -3,13 +3,15 @@ import TableRow from '@mui/material/TableRow';
 import { Typography } from '@mui/material';
 import CodeBlock from './CodeBlock';
 
-export default function PreviewRow({ font, transform, fontName, previewText, fontWeight, fontSize, codeDisplay, htmlTag }) {
+export default function PreviewRow({ font, transform, fontName, previewText, fontWeight, fontSize, codeDisplay, htmlTag, fontItalic }) {
+  const italicFont = fontItalic ? 'italic' : 'normal';
   const styling = {
     fontFamily: font,
     fontSize: `${fontSize}em`,
     fontWeight: fontWeight,
     whiteSpace: 'nowrap',
     transform: transform,
+    fontStyle: italicFont,
   };
 
   const fontInfo = (

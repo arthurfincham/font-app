@@ -3,7 +3,7 @@ import Table from '@mui/material/Table';
 import TableContainer from '@mui/material/TableContainer';
 import { render } from '@testing-library/react';
 
-export default function PreviewTable({ fontSize, previewText, fontWeight, codeDisplay }) {
+export default function PreviewTable({ fontSize, previewText, fontWeight, codeDisplay, fontItalic }) {
   const htmlBodoni = (font) => {
     return `<link href='https://fonts.googleapis.com/css2?family=${font}:wght@400;500;600;700;800&display=swap' rel='stylesheet' />`;
   };
@@ -18,6 +18,7 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           font={'Bodoni Moda'}
           fontName={'Bodoni'}
           htmlTag={htmlBodoni}
+          fontItalic={fontItalic}
           previewText={previewText}
           transform={null}
         />
@@ -28,6 +29,7 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
           font={'EB Garamond'}
           fontName={'Garamond'}
           htmlTag={htmlBodoni}
+          fontItalic={fontItalic}
           previewText={previewText}
           transform={null}
         />
