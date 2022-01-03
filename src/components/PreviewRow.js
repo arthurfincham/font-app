@@ -8,7 +8,7 @@ import { ItalicContext } from '../context/ItalicContext';
 import { CodeSnippetContext } from '../context/CodeSnippetContext';
 import { useContext } from 'react';
 
-export default function PreviewRow({ font, transform, fontName, previewText, codeDisplay, htmlTag }) {
+export default function PreviewRow({ font, transform, fontName, previewText, htmlTag }) {
   const { myFontSize, setMyFontSize } = useContext(SizeContext);
   const { myFontWeight, setMyFontWeight } = useContext(WeightContext);
   const { myFontItalic, setMyFontItalic } = useContext(ItalicContext);
