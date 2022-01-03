@@ -2,12 +2,15 @@ import TableCell from '@mui/material/TableCell';
 import TableRow from '@mui/material/TableRow';
 import { Typography } from '@mui/material';
 import CodeBlock from './CodeBlock';
+import { SizeContext } from '../context/SizeContext';
+import { useContext } from 'react';
 
-export default function PreviewRow({ font, transform, fontName, previewText, fontWeight, fontSize, codeDisplay, htmlTag, fontItalic }) {
+export default function PreviewRow({ font, transform, fontName, previewText, fontWeight, codeDisplay, htmlTag, fontItalic }) {
+  const { myFontSize, setMyFontSize } = useContext(SizeContext);
   const italicFont = fontItalic ? 'italic' : 'normal';
   const styling = {
     fontFamily: font,
-    fontSize: `${fontSize}em`,
+    fontSize: `${myFontSize}em`,
     fontWeight: fontWeight,
     whiteSpace: 'nowrap',
     transform: transform,

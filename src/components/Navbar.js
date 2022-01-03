@@ -17,11 +17,9 @@ export default function Navbar({
   textColor,
   previewInput,
   previewText,
-  setFontSize,
   updatePreviewText,
   setFontWeight,
   fontWeight,
-  fontSize,
   codeDisplay,
   setCodeDisplay,
   fontItalic,
@@ -31,7 +29,7 @@ export default function Navbar({
     <NavWrapper>
       <PreviewInput updatePreviewText={updatePreviewText} previewInput={previewInput} previewText={previewText} />
       <ToggleWrapper>
-        <FontSize fontSize={fontSize} setFontSize={setFontSize} />
+        <FontSize />
         <FontWeight fontWeight={fontWeight} setFontWeight={setFontWeight} />
         <Single state={fontItalic} setState={setFontItalic} title="Italic" icon={<FormatItalicIcon size="1.5em" />} />
         <Single state={codeDisplay} setState={setCodeDisplay} title="Code Snippets" icon={<CodeIcon size="1.5em" />} />

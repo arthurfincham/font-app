@@ -4,13 +4,12 @@ import Navbar from './components/Navbar';
 import { ThemeProvider } from 'styled-components';
 import { createTheme } from '@mui/material/styles';
 import { GlobalStyles } from './global';
+import { SizeProvider } from './context/SizeContext';
 
 function App() {
   const [previewText, setPreviewText] = useState([null]);
 
   const previewInput = useRef(null);
-
-  const [fontSize, setFontSize] = useState('2');
 
   const [fontWeight, setFontWeight] = useState('600');
 
@@ -45,8 +44,6 @@ function App() {
     bodyColor,
     setTextColor,
     textColor,
-    setFontSize,
-    fontSize,
     updatePreviewText,
     previewText,
     setFontWeight,
@@ -72,20 +69,21 @@ function App() {
 
   return (
     <>
-      <Navbar {...navProps} />
-      <main>
-        <ThemeProvider theme={colorTheme}>
-          <GlobalStyles />
-          <PreviewTable
-            fontSize={fontSize}
-            fontItalic={fontItalic}
-            codeDisplay={codeDisplay}
-            previewText={previewText}
-            fontWeight={fontWeight}
-            sx={{ height: '100%' }}
-          />
-        </ThemeProvider>
-      </main>
+      <SizeProvider>
+        <Navbar {...navProps} />
+        <main>
+          <ThemeProvider theme={colorTheme}>
+            <GlobalStyles />
+            <PreviewTable
+              fontItalic={fontItalic}
+              codeDisplay={codeDisplay}
+              previewText={previewText}
+              fontWeight={fontWeight}
+              sx={{ height: '100%' }}
+            />
+          </ThemeProvider>
+        </main>
+      </SizeProvider>
     </>
   );
 }
