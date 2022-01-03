@@ -1,15 +1,19 @@
 import ToggleButton from '@mui/material/ToggleButton';
 import { StyledToggleButtonGroup } from '../styled/styledTheme';
-
 import { Typography } from '@mui/material';
 import ToggleTooltip from '../ToggleTooltip';
-export default function FontWeight({ fontWeight, setFontWeight }) {
+import { WeightContext } from '../../context/WeightContext';
+import { useContext } from 'react';
+
+export default function FontWeight() {
+  const { myFontWeight, setMyFontWeight } = useContext(WeightContext);
   const handleWeight = (event, newAlignment) => {
-    setFontWeight(newAlignment);
+    setMyFontWeight(newAlignment);
   };
+
   return (
     <ToggleTooltip title="Weight">
-      <StyledToggleButtonGroup size="small" value={fontWeight} exclusive onChange={handleWeight} aria-label="text alignment">
+      <StyledToggleButtonGroup size="small" value={myFontWeight} exclusive onChange={handleWeight} aria-label="text alignment">
         <ToggleButton value="400" aria-label="left aligned">
           <Typography variant="button" sx={{ fontWeight: 'bold' }}>
             400
