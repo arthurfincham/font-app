@@ -17,7 +17,7 @@ export default function FontWeight() {
       <StyledToggleButtonGroup size="small" value={myFontWeight} exclusive onChange={handleWeight} aria-label="text alignment">
         {fontWeights.map((weight) => {
           return (
-            <ToggleButton key={weight} value={`${weight}`} aria-label="left aligned">
+            <ToggleButton key={weight} value={`${weight}`} aria-label={`Set Weight ${weight}`}>
               <Typography variant="button" sx={{ fontWeight: 'bold' }}>
                 {weight}
               </Typography>
