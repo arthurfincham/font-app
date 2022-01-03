@@ -1,6 +1,6 @@
 import { useState, createContext } from 'react';
 
-export const CodeSnippetContext = createContext();
+export const CodeSnippetContext = createContext('');
 
 export const CodeSnippetProvider = ({ children }) => {
   const [myCodeSnippet, setMyCodeSnippet] = useState(false);

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly enzyme 1`] = `
+<Styled(Component)
+  enterDelay={900}
+  enterNextDelay={400}
+  title={
+    <ForwardRef(Box)>
+      <ForwardRef(Typography)
+        sx={
+          Object {
+            "fontSize": "1em",
+          }
+        }
+        variant="caption"
+      />
+    </ForwardRef(Box)>
+  }
+/>
+`;

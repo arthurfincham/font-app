@@ -1,6 +1,6 @@
 import { useState, createContext } from 'react';
 
-export const TextColorContext = createContext();
+export const TextColorContext = createContext('');
 
 export const TextColorProvider = ({ children }) => {
   const [myTextColor, setMyTextColor] = useState('#000');

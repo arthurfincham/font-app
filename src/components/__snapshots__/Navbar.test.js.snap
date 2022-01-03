@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly enzyme 1`] = `
+<NavWrapper>
+  <PreviewInput />
+  <ToggleWrapper>
+    <FontSize />
+    <FontWeight />
+    <Single />
+    <Single />
+    <BodyColor />
+    <TextColor />
+  </ToggleWrapper>
+</NavWrapper>
+`;

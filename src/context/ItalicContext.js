@@ -1,6 +1,6 @@
 import { useState, createContext } from 'react';
 
-export const ItalicContext = createContext();
+export const ItalicContext = createContext('');
 
 export const ItalicProvider = ({ children }) => {
   const [myFontItalic, setMyFontItalic] = useState(false);

@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly enzyme 1`] = `
+<ToggleTooltip
+  title="Weight"
+>
+  <Styled(ForwardRef(ToggleButtonGroup))
+    aria-label="text alignment"
+    exclusive={true}
+    onChange={[Function]}
+    size="small"
+  >
+    <ForwardRef(ToggleButton)
+      aria-label="Set Weight 400"
+      key="400"
+      value="400"
+    >
+      <ForwardRef(Typography)
+        sx={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+        variant="button"
+      >
+        400
+      </ForwardRef(Typography)>
+    </ForwardRef(ToggleButton)>
+    <ForwardRef(ToggleButton)
+      aria-label="Set Weight 500"
+      key="500"
+      value="500"
+    >
+      <ForwardRef(Typography)
+        sx={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+        variant="button"
+      >
+        500
+      </ForwardRef(Typography)>
+    </ForwardRef(ToggleButton)>
+    <ForwardRef(ToggleButton)
+      aria-label="Set Weight 600"
+      key="600"
+      value="600"
+    >
+      <ForwardRef(Typography)
+        sx={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+        variant="button"
+      >
+        600
+      </ForwardRef(Typography)>
+    </ForwardRef(ToggleButton)>
+    <ForwardRef(ToggleButton)
+      aria-label="Set Weight 700"
+      key="700"
+      value="700"
+    >
+      <ForwardRef(Typography)
+        sx={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+        variant="button"
+      >
+        700
+      </ForwardRef(Typography)>
+    </ForwardRef(ToggleButton)>
+    <ForwardRef(ToggleButton)
+      aria-label="Set Weight 800"
+      key="800"
+      value="800"
+    >
+      <ForwardRef(Typography)
+        sx={
+          Object {
+            "fontWeight": "bold",
+          }
+        }
+        variant="button"
+      >
+        800
+      </ForwardRef(Typography)>
+    </ForwardRef(ToggleButton)>
+  </Styled(ForwardRef(ToggleButtonGroup))>
+</ToggleTooltip>
+`;

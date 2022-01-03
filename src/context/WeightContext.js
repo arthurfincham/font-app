@@ -1,6 +1,6 @@
 import { useState, createContext } from 'react';
 
-export const WeightContext = createContext();
+export const WeightContext = createContext('');
 
 export const WeightProvider = ({ children }) => {
   const [myFontWeight, setMyFontWeight] = useState('600');
