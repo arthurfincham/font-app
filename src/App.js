@@ -33,7 +33,7 @@ function App() {
   return (
     <AppContextProvider>
       <Navbar {...navProps} />
-      <main>
+      <main id="mainSection">
         <PreviewTable previewText={previewText} sx={{ height: '100%' }} />
       </main>
     </AppContextProvider>

@@ -15,7 +15,9 @@ exports[`renders App correctly 1`] = `
     }
     updatePreviewText={[Function]}
   />
-  <main>
+  <main
+    id="mainSection"
+  >
     <PreviewTable
       previewText={
         Array [
