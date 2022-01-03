@@ -5,7 +5,7 @@ import toJson from 'enzyme-to-json';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 Enzyme.configure({ adapter: new Adapter() });
 
-it('renders correctly enzyme', () => {
+it('renders App correctly', () => {
   const wrapper = shallow(<App />);
 
   expect(toJson(wrapper)).toMatchSnapshot();
