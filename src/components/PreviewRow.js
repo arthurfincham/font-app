@@ -38,7 +38,7 @@ export default function PreviewRow({ font, transform, fontName, previewText, htm
       <TableCell sx={{ width: 'auto', paddingInline: 6 }} style={styling}>
         {previewText[0] === null || previewText.length === 0 ? fontName : previewText}
       </TableCell>
-      {myCodeSnippet ? <CodeBlock font={font} fontWeight={myFontWeight} htmlTag={htmlTag} transform={transform} fontItalic={myFontItalic} /> : null}
+      {myCodeSnippet ? <CodeBlock font={font} htmlTag={htmlTag} transform={transform} /> : null}
       {myCodeSnippet ? null : fontInfo}
     </TableRow>
   );
