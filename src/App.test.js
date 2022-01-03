@@ -1,8 +1,14 @@
-import { render, screen } from '@testing-library/react';
 import App from './App';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Enzyme, { shallow, render, mount } from 'enzyme';
+import toJson from 'enzyme-to-json';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import { AppBar } from '@mui/material';
+Enzyme.configure({ adapter: new Adapter() });
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+it('renders correctly enzyme', () => {
+  const wrapper = shallow(<App />);
+
+  expect(toJson(wrapper)).toMatchSnapshot();
 });

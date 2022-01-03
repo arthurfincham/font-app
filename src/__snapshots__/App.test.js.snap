@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly enzyme 1`] = `
+<AppContextProvider>
+  <Navbar
+    previewInput={
+      Object {
+        "current": null,
+      }
+    }
+    previewText={
+      Array [
+        null,
+      ]
+    }
+    updatePreviewText={[Function]}
+  />
+  <main>
+    <PreviewTable
+      previewText={
+        Array [
+          null,
+        ]
+      }
+      sx={
+        Object {
+          "height": "100%",
+        }
+      }
+    />
+  </main>
+</AppContextProvider>
+`;
