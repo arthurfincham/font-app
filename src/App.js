@@ -1,12 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import PreviewTable from './components/PreviewTable';
 import Navbar from './components/Navbar';
-import { SizeProvider } from './context/SizeContext';
-import { WeightProvider } from './context/WeightContext';
-import { BodyColorProvider } from './context/BodyColorContext';
-import { TextColorProvider } from './context/TextColorContext';
-import { ItalicProvider } from './context/ItalicContext';
-import { CodeSnippetProvider } from './context/CodeSnippetContext';
+import AppContextProvider from './context/AppContextProvider';
 
 function App() {
   const [previewText, setPreviewText] = useState([null]);
@@ -36,24 +31,12 @@ function App() {
   }, [previewText]);
 
   return (
-    <>
-      <TextColorProvider>
-        <BodyColorProvider>
-          <CodeSnippetProvider>
-            <ItalicProvider>
-              <WeightProvider>
-                <SizeProvider>
-                  <Navbar {...navProps} />
-                  <main>
-                    <PreviewTable previewText={previewText} sx={{ height: '100%' }} />
-                  </main>
-                </SizeProvider>
-              </WeightProvider>
-            </ItalicProvider>
-          </CodeSnippetProvider>
-        </BodyColorProvider>
-      </TextColorProvider>
-    </>
+    <AppContextProvider>
+      <Navbar {...navProps} />
+      <main>
+        <PreviewTable previewText={previewText} sx={{ height: '100%' }} />
+      </main>
+    </AppContextProvider>
   );
 }
 
