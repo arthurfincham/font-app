@@ -6,9 +6,9 @@ import { createTheme } from '@mui/material/styles';
 import { GlobalStyles } from '../global';
 import { BodyColorContext } from '../context/BodyColorContext';
 import { TextColorContext } from '../context/TextColorContext';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 
-export default function PreviewTable({ fontSize, previewText, fontWeight, codeDisplay, fontItalic }) {
+export default function PreviewTable({ previewText }) {
   const htmlItalic = (font) => {
     return `<link href='https://fonts.googleapis.com/css2?family=${font}:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap' rel='stylesheet' />`;
   };
@@ -17,9 +17,9 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
     return `<link href='https://fonts.googleapis.com/css2?family=${font}:wght@400;500;600;700;800&display=swap' rel='stylesheet' />`;
   };
 
-  const { myBodyColor, setMyBodyColor } = useContext(BodyColorContext);
+  const { myBodyColor } = useContext(BodyColorContext);
 
-  const { myTextColor, setMyTextColor } = useContext(TextColorContext);
+  const { myTextColor } = useContext(TextColorContext);
 
   const colorTheme = createTheme({
     body: myBodyColor,
