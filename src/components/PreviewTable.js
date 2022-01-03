@@ -1,6 +1,12 @@
 import PreviewRow from './PreviewRow';
 import Table from '@mui/material/Table';
 import TableContainer from '@mui/material/TableContainer';
+import { ThemeProvider } from 'styled-components';
+import { createTheme } from '@mui/material/styles';
+import { GlobalStyles } from '../global';
+import { BodyColorContext } from '../context/BodyColorContext';
+import { TextColorContext } from '../context/TextColorContext';
+import { useState, useContext } from 'react';
 
 export default function PreviewTable({ fontSize, previewText, fontWeight, codeDisplay, fontItalic }) {
   const htmlItalic = (font) => {
@@ -11,55 +17,39 @@ export default function PreviewTable({ fontSize, previewText, fontWeight, codeDi
     return `<link href='https://fonts.googleapis.com/css2?family=${font}:wght@400;500;600;700;800&display=swap' rel='stylesheet' />`;
   };
 
-  return (
-    <TableContainer>
-      <Table aria-label="simple table">
-        <tbody>
-          <PreviewRow
-            codeDisplay={codeDisplay}
-            fontWeight={fontWeight}
-            fontSize={fontSize}
-            font={'Bodoni Moda'}
-            fontName={'Bodoni'}
-            htmlTag={htmlItalic}
-            fontItalic={fontItalic}
-            previewText={previewText}
-            transform={null}
-          />
-          <PreviewRow
-            codeDisplay={codeDisplay}
-            fontWeight={fontWeight}
-            fontSize={fontSize}
-            font={'EB Garamond'}
-            fontName={'Garamond'}
-            htmlTag={htmlItalic}
-            fontItalic={fontItalic}
-            previewText={previewText}
-            transform={null}
-          />
-          <PreviewRow
-            codeDisplay={codeDisplay}
-            fontWeight={fontWeight}
-            fontSize={fontSize}
-            font={'Hind'}
-            fontName={'Hind'}
-            htmlTag={htmlNormal}
-            previewText={previewText}
-            transform={'scale(1,.92)'}
-          />
+  const { myBodyColor, setMyBodyColor } = useContext(BodyColorContext);
 
-          <PreviewRow
-            codeDisplay={codeDisplay}
-            fontWeight={fontWeight}
-            fontSize={fontSize}
-            font={'Inter'}
-            fontName={'Inter'}
-            htmlTag={htmlNormal}
-            previewText={previewText}
-            transform={null}
-          />
-        </tbody>
-      </Table>
-    </TableContainer>
+  const { myTextColor, setMyTextColor } = useContext(TextColorContext);
+
+  const colorTheme = createTheme({
+    body: myBodyColor,
+    text: myTextColor,
+    breakpoints: {
+      values: {
+        xxs: 0, // small phone
+        xs: 300, // phone
+        sm: 600, // tablets
+        md: 900, // small laptop
+        lg: 1200, // desktop
+        xl: 1536, // large screens
+      },
+    },
+  });
+
+  return (
+    <ThemeProvider theme={colorTheme}>
+      <GlobalStyles />
+      <TableContainer>
+        <Table aria-label="simple table">
+          <tbody>
+            <PreviewRow font={'Bodoni Moda'} fontName={'Bodoni'} htmlTag={htmlItalic} previewText={previewText} transform={null} />
+            <PreviewRow font={'EB Garamond'} fontName={'Garamond'} htmlTag={htmlItalic} previewText={previewText} transform={null} />
+            <PreviewRow font={'Hind'} fontName={'Hind'} htmlTag={htmlNormal} previewText={previewText} transform={'scale(1,.92)'} />
+
+            <PreviewRow font={'Inter'} fontName={'Inter'} htmlTag={htmlNormal} previewText={previewText} transform={null} />
+          </tbody>
+        </Table>
+      </TableContainer>
+    </ThemeProvider>
   );
 }
