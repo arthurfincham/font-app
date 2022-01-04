@@ -1,4 +1,4 @@
-import AppContextProvider from './AppContextProvider';
+import AppContextProvider from '../AppContextProvider';
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';

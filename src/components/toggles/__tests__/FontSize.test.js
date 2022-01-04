@@ -1,4 +1,4 @@
-import FontSize from './FontSize';
+import FontSize from '../FontSize';
 import React from 'react';
 import Enzyme, { shallow, mount, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
@@ -13,7 +13,7 @@ it('it correctly renders the FS toggle', () => {
   expect(toJson(wrapper)).toMatchSnapshot();
 });
 
-it('has three toggles', () => {
+it('has three buttons', () => {
   const wrapper = mount(<FontSize />);
   expect(wrapper.find('button')).toHaveLength(3);
 });

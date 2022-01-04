@@ -1,4 +1,4 @@
-import PreviewRow from './PreviewRow';
+import BodyColor from '../BodyColor';
 import React from 'react';
 import Enzyme, { shallow, mount, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
@@ -7,7 +7,8 @@ import 'jest-styled-components';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-it('renders with passed props', () => {
-  const wrapper = shallow(<PreviewRow previewText="Dummy text" />);
-  expect(wrapper.text()).toEqual('Dummy text');
+it('it correctly renders the BodyColor toggle', () => {
+  const wrapper = shallow(<BodyColor />);
+
+  expect(toJson(wrapper)).toMatchSnapshot();
 });

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`combines other context providers 1`] = `
+<TextColorProvider>
+  <BodyColorProvider>
+    <CodeSnippetProvider>
+      <ItalicProvider>
+        <WeightProvider>
+          <SizeProvider />
+        </WeightProvider>
+      </ItalicProvider>
+    </CodeSnippetProvider>
+  </BodyColorProvider>
+</TextColorProvider>
+`;

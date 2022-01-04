@@ -1,5 +1,5 @@
 import React from 'react';
-import { CodeSnippetContext, CodeSnippetProvider } from './CodeSnippetContext';
+import { CodeSnippetContext, CodeSnippetProvider } from '../CodeSnippetContext';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 Enzyme.configure({ adapter: new Adapter() });

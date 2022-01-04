@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it correctly renders the CodeSnippet toggle 1`] = `
+<ToggleTooltip
+  title="Code Snippet"
+>
+  <Styled(ForwardRef(ToggleButtonGroup))
+    aria-label="code snippet"
+    exclusive={true}
+    onChange={[Function]}
+    size="small"
+    value={false}
+  >
+    <ForwardRef(ToggleButton)
+      aria-label="left aligned"
+      value={true}
+    >
+      <Memo(ForwardRef(CodeIcon)) />
+    </ForwardRef(ToggleButton)>
+  </Styled(ForwardRef(ToggleButtonGroup))>
+</ToggleTooltip>
+`;

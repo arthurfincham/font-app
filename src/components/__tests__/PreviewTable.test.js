@@ -1,7 +1,7 @@
-import PreviewTable from './PreviewTable';
-import PreviewRow from './PreviewRow';
+import PreviewTable from '../PreviewTable';
+import PreviewRow from '../PreviewRow';
 import React from 'react';
-import Enzyme, { shallow, mount, render } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import 'jest-styled-components';
@@ -13,7 +13,7 @@ it('renders the preview table correctly', () => {
   expect(toJson(wrapper)).toMatchSnapshot();
 });
 
-it('should render the PreviewRow components', () => {
+it('renders the PreviewRow components', () => {
   const wrapper = shallow(<PreviewTable />);
 
   expect(wrapper.containsMatchingElement(<PreviewRow />)).toEqual(true);

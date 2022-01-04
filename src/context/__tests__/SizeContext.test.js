@@ -1,5 +1,5 @@
 import React from 'react';
-import { SizeContext, SizeProvider } from './SizeContext';
+import { SizeContext, SizeProvider } from '../SizeContext';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 Enzyme.configure({ adapter: new Adapter() });
