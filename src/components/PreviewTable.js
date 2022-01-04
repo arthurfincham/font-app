@@ -44,6 +44,7 @@ export default function PreviewTable({ previewText }) {
           <tbody>
             <PreviewRow font={'Bodoni Moda'} fontName={'Bodoni'} htmlTag={htmlItalic} previewText={previewText} transform={null} />
             <PreviewRow font={'EB Garamond'} fontName={'Garamond'} htmlTag={htmlItalic} previewText={previewText} transform={null} />
+            <PreviewRow font={'IBM Plex Serif'} fontName={'IBM Plex'} htmlTag={htmlItalic} previewText={previewText} transform={null} />
             <PreviewRow font={'Hind'} fontName={'Hind'} htmlTag={htmlNormal} previewText={previewText} transform={'scale(1,.92)'} />
 
             <PreviewRow font={'Inter'} fontName={'Inter'} htmlTag={htmlNormal} previewText={previewText} transform={null} />

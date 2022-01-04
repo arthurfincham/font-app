@@ -313,6 +313,12 @@ exports[`renders the preview table correctly 1`] = `
           transform={null}
         />
         <PreviewRow
+          font="IBM Plex Serif"
+          fontName="IBM Plex"
+          htmlTag={[Function]}
+          transform={null}
+        />
+        <PreviewRow
           font="Hind"
           fontName="Hind"
           htmlTag={[Function]}
