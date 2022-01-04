@@ -104,6 +104,9 @@ The theme is also controlled with _useContext_. The preview table component take
 
 ```javascript
 ...
+const { myBodyColor } = useContext(BodyColorContext);
+const { myTextColor } = useContext(TextColorContext);
+
 const colorTheme = createTheme({
     body: myBodyColor,
     text: myTextColor,
