@@ -17,7 +17,7 @@
 - [Motivation](#Motivation)
 - [Features](#Features)
 - [Install](#Install)
-- [Stack](#Stack)p
+- [Stack](#Stack)
 
 ## Motivation
 
