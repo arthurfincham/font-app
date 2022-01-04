@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  
 
   main,  #themeToggleButton {
     background: ${({ theme }) => theme.body};
