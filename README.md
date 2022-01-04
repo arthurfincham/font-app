@@ -27,27 +27,41 @@ Over the holidays I started learning more about Fonts; Serif, Sans Serif, Displa
 
 My idea for this project was to create a preview app that only has fonts that a designer might _need_. Another important point is that the fonts are readily available (and free). Fonts like Futura are classics but cannot be found for free - I looked for free alteratives on Google Fonts.
 
-## Features: user can....
+## Features:
 
-#### dynamically preview their text
+#### Dynamic Text Preview
 
 <div align="center">
+
+```
+So that I can see how my font will look,
+I need to be able to see a preview.
+```
 
 <img src="public/gifs/previewText.gif" width="500">
 
 </div>
 
-To prevent the input field from rerendering after typing a character I used the useEffect and useRef hooks alongside useState.
+&nbsp;
 
-#### toggle font weight, size and italic
+To prevent the input field from rerendering after typing a character I used the _useEffect_ and _useRef_ hooks alongside _useState_.
+
+#### Toggle Weight, Size and Italic
 
 <div align="center">
 
-<img src="public/gifs/fontWeightSize.gif" width="500">
+```
+So that I can try different styles,
+I need to be able to adjust weight, size and italic.
+```
+
+<img src="public/gifs/fontToggles.gif" width="500">
 
 </div>
 
-The first build of the project fell victim to _prop drilling_; for instance the props for the toolbar looking like this...
+&nbsp;
+
+The first build of the project fell victim to _prop drilling_; for instance the props for the navbar...
 
 ```javascript
 const navProps = {
@@ -69,17 +83,24 @@ const navProps = {
 };
 ```
 
-After some research on the useContext hook, I wrapped the project in a provider which gives global state and saves the waterfall of props.
+After some research on the _useContext_ hook, I wrapped the project in a _provider_ which gives global state and saves the waterfall of props.
 
-#### create a custom theme
+### Custom Theme
 
 <div align="center">
+
+```
+So that I can try different colors,
+I need to be able to create a custom theme.
+```
 
 <img src="public/gifs/customTheme.gif" width="500">
 
 </div>
 
-The theme is also controlled with useContext. The preview table component takes a style prop which has variables defined by useContext.
+&nbsp;
+
+The theme is also controlled with _useContext_. The preview table component takes a style prop which has variables defined by _useContext_.
 
 ```javascript
 ...
@@ -93,19 +114,24 @@ const colorTheme = createTheme({
 ...
 ```
 
-#### click to copy the HTML and CSS for their current configuration
+#### 'Click-to-Copy' CDN and CSS
 
 <div align="center">
 
-<img src="public/gifs/customTags.gif" width="500">
+```
+To make my life easier,
+I need to have the code snippets ready-made to copy.
+```
+
+<img src="public/gifs/codeSnippets.gif" width="500">
 
 </div>
+
+&nbsp;
 
 I used [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter) which has a great [demo page](https://react-syntax-highlighter.github.io/react-syntax-highlighter/demo/) to preview highlighting themes.
 
 And a package called [react-copy-to-clipboard](https://github.com/nkbt/react-copy-to-clipboard) for the click to copy feature.
-
-## Install
 
 ## Stack
 
