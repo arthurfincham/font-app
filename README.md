@@ -4,7 +4,7 @@
 
 # The Only Fonts You Need
 
-## [Live Preview]()
+## [Live Preview](https://font-app.vercel.app/)
 
 ![](https://img.shields.io/github/last-commit/arthurfincham/font-app)
 ![](https://img.shields.io/github/languages/count/arthurfincham/font-app)
@@ -142,4 +142,4 @@ And a package called [react-copy-to-clipboard](https://github.com/nkbt/react-cop
 - Jest
 - Enzyme
 - Material UI
-- Heroku
+- Vercel
