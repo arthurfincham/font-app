@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/fontLogo.svg" width="200px">
+<img src="public/siteBanner.png" width="200px">
 
 # The Only Fonts You Need
 
