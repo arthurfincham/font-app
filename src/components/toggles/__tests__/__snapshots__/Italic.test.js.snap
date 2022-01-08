@@ -13,6 +13,7 @@ exports[`it correctly renders the Italic toggle 1`] = `
   >
     <ForwardRef(ToggleButton)
       aria-label="left aligned"
+      data-testid="Italic-test"
       value={true}
     >
       <Memo(ForwardRef(FormatItalicIcon)) />

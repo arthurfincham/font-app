@@ -15,7 +15,7 @@ export default function Single() {
   return (
     <ToggleTooltip title="Italic">
       <StyledToggleButtonGroup size="small" value={false} exclusive onChange={handleToggle} aria-label="code snippet">
-        <ToggleButton value={!myFontItalic} aria-label="left aligned">
+        <ToggleButton value={!myFontItalic} aria-label="left aligned" data-testid="Italic-test">
           <FormatItalicIcon />
         </ToggleButton>
       </StyledToggleButtonGroup>
